@@ -1,0 +1,11 @@
+{
+  "name": "projet-3---dynamisez-une-page-web-avec-des-animations-css",
+  "version": "1.0.0",
+  "description": "projet3OC",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "SV",
+  "license": "ISC"
+}
