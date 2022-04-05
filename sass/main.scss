@@ -1,7 +1,96 @@
 .header-logo {
-    width: 12%;
-}
-
-.formulaire {
-    background-color: red;
-}
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    
+  }
+  
+  .formulaire {
+    background-color: green;
+  }
+  
+  /* Organisation des vignettes */
+  
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+    .restaurants ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  
+    .restaurants-orga-card {
+      width: 100%;
+      height: auto;
+      margin: 20px 0; 
+      background-color: white;
+      box-shadow: 2px 5px 5px grey;
+      border-radius: 15px;
+    }
+      .restaurants-orga-card a { 
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+        min-height: 100%;
+        max-height: 100%;
+        color: black;
+      }
+  
+      .restaurants-orga-card span {
+        position: relative;
+        bottom: 165px; left: 230px;
+        background-color: lightgreen;
+        color: green;
+        font-weight: bold;
+        padding: 6px 10px;
+        border-radius: 3px;
+      }
+  
+      .restaurants-orga-card-image { 
+        height: 180px;
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;   
+        object-position: 50% 130%;
+      }
+  
+      .restaurants-orga-card-image1 { 
+        height: 180px;
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;   
+        object-position: 50% 110%;
+      }
+  
+      .restaurants-orga-card-image2 {
+        height: 180px;
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;   
+        object-position: 50% 60%;
+      }
+  
+      .restaurants-orga-card-texte {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 10px;
+      }
+  
+        .restaurants-orga-card-texte h2 {
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+  
+        .restaurants-orga-card-texte p {
+          margin-top: 0;
+        }
+  
+        .heart {
+          display: flex;
+          align-items: center;
+          font-size: 60px;
+        }
+  
