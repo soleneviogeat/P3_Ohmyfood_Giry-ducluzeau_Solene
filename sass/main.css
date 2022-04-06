@@ -91,7 +91,7 @@ button {
   border-radius: 30px;
   background-color: purple;
   border: transparent;
-  padding: 12px;
+  padding: 20px;
 }
 
 /* Paramètres des box */
@@ -102,6 +102,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  height: auto;
   width: 100%;
   margin-bottom: 30px;
   border-radius: 15px;
@@ -203,6 +204,7 @@ button {
 
 .restaurants {
   padding: 30px 20px;
+  background-color: #f2f2f2;
   /* Organisation des vignettes */
 }
 
@@ -305,7 +307,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .footer {
