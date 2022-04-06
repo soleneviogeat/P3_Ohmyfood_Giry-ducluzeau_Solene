@@ -1,0 +1,84 @@
+.restaurants {
+    padding: 30px 20px;
+
+    &-orga {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* Organisation des vignettes */
+
+    & ul {
+        list-style-type: none;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    &-orga-card {}
+
+    &-orga-card a {
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+        color: black;
+    }
+
+    &-orga-card span {
+        position: relative;
+        bottom: 165px;
+        left: 260px;
+        background-color: lightgreen;
+        color: green;
+        font-weight: bold;
+        padding: 6px 10px;
+        border-radius: 3px;
+    }
+
+    &-orga-card-image {
+        height: 180px;
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+        object-position: 50% 130%;
+    }
+
+    &-orga-card-image1 {
+        height: 180px;
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+        object-position: 50% 110%;
+    }
+
+    &-orga-card-image2 {
+        height: 180px;
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+        object-position: 50% 60%;
+    }
+
+    &-orga-card-texte {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 10px;
+    }
+
+    &-orga-card-texte h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    &-orga-card-texte p {
+        margin-top: 0;
+    }
+
+    .heart {
+        display: flex;
+        align-items: center;
+        font-size: 60px;
+    }
+}

@@ -4,8 +4,10 @@
   "description": "projet3OC",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/main.css",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "SV",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }

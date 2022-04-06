@@ -1,0 +1,56 @@
+.fonctionnement {
+    padding: 30px 20px;
+
+    &-orga {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &-box {
+        display: flex;
+        justify-content: flex-start;
+
+
+        & a {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+    }
+
+    &-box-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -15px;
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        border-radius: 50%;
+        color: white;
+        background-color: purple;
+    }
+
+    &-box-icone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        font-size: 30px;
+        color: grey;
+    }
+
+    &-box-txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+        font-weight: bold;
+        color: black;
+    }
+}

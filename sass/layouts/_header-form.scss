@@ -1,16 +1,18 @@
 /* Mise en page du formulaire dans le header */
 
-form {
-display: flex;
-justify-content: center;
-}
+form {}
 
 .formulaire {
-background-color: lightgrey;
-padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    padding: 12px;
 }
 
 .formulaire-recherche {
+
     text-decoration: none;
     background-color: lightgrey;
     border: lightgrey;

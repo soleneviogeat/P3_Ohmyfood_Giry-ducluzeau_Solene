@@ -1,8 +1,14 @@
 /* Mise en page du header */
 
 .header-logo {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    padding: 12px;
-  }
+  width: 40%;
+  padding: 12px;
+}
+
+.header-logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
