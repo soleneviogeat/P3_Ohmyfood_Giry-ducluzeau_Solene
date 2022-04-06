@@ -4,7 +4,7 @@
   "description": "projet3OC",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./sass/css/main.css",
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css",
     "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "SV",

@@ -1,7 +1,5 @@
 /* Mise en page du formulaire dans le header */
 
-form {}
-
 .formulaire {
     display: flex;
     flex-direction: row;
@@ -9,13 +7,15 @@ form {}
     align-items: center;
     background-color: lightgrey;
     padding: 12px;
-}
+    width: 100%;
+    box-shadow: 0 0 1em grey;
 
-.formulaire-recherche {
-
-    text-decoration: none;
-    background-color: lightgrey;
-    border: lightgrey;
+    &-recherche {
+        text-decoration: none;
+        background-color: lightgrey;
+        border: lightgrey;
+        padding-left: 15px;
+    }
 }
 
 ::placeholder {

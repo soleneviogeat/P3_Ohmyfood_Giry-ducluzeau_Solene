@@ -7,15 +7,20 @@
     align-items: center;
     text-align: center;
     background-color: #f2f2f2;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-bottom: 30px;
+
+    & p {
+        font-size: large;
+        margin-top: 0;
+    }
 }
 
 button {
     color: white;
     border-radius: 30px;
-    background-color: purple;
+    background: linear-gradient(#FF79DA, #9356DC);
     border: transparent;
     padding: 20px;
 }
