@@ -1,15 +1,96 @@
+@charset "UTF-8";
+/* Mise en page du header */
 .header-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  padding: 12px;
+}
+
+/* Mise en page du formulaire dans le header */
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .formulaire {
-  background-color: green;
+  background-color: lightgrey;
+  padding: 12px;
+}
+
+.formulaire-recherche {
+  text-decoration: none;
+  background-color: lightgrey;
+  border: lightgrey;
+}
+
+::-webkit-input-placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+:-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+::-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+::placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+/* Mise en page 3ème partie du header */
+.reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  color: white;
+  border-radius: 30px;
+  background-color: purple;
+  border: transparent;
+  padding: 12px;
+}
+
+/* Paramètres des box */
+.box {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+html {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Organisation des vignettes */

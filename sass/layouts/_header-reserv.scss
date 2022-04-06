@@ -1,0 +1,16 @@
+/* Mise en page 3ème partie du header */
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    color: white;
+    border-radius: 30px;
+    background-color: purple;
+    border: transparent;
+    padding: 12px;
+}

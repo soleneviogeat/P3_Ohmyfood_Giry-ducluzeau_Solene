@@ -1,0 +1,22 @@
+/* Mise en page du formulaire dans le header */
+
+form {
+display: flex;
+justify-content: center;
+}
+
+.formulaire {
+background-color: lightgrey;
+padding: 12px;
+}
+
+.formulaire-recherche {
+    text-decoration: none;
+    background-color: lightgrey;
+    border: lightgrey;
+}
+
+::placeholder {
+    font-weight: bold;
+    color: black;
+}
