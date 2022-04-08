@@ -4,8 +4,8 @@
   "description": "projet3OC",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css -w --style compressed",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css -w --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "SV",
   "license": "ISC",
