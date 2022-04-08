@@ -4,10 +4,18 @@
   "description": "projet3OC",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./sass/main.css",
-    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css -w --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "author": "SV",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soleneviogeat/P3_Ohmyfood_Giry-ducluzeau_Solene.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soleneviogeat/P3_Ohmyfood_Giry-ducluzeau_Solene/issues"
+  },
+  "homepage": "https://github.com/soleneviogeat/P3_Ohmyfood_Giry-ducluzeau_Solene#readme"
 }
