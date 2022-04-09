@@ -8,7 +8,7 @@
     background-color: lightgrey;
     padding: 12px;
     width: 100%;
-    box-shadow: 0 0 1em grey;
+    box-shadow: inset 0em .2em 2px grey;
 
     &-recherche {
         text-decoration: none;
@@ -19,6 +19,9 @@
 }
 
 ::placeholder {
+    text-align: center;
     font-weight: bold;
     color: black;
+    font-size: 14px;
+    font-family: 'Shrikhand', sans-serif;
 }
