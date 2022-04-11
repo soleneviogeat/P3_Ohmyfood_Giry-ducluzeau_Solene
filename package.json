@@ -9,13 +9,5 @@
   },
   "author": "SV",
   "license": "ISC",
-  "browserslist": "last 4 versions",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/soleneviogeat/P3_Ohmyfood_Giry-ducluzeau_Solene.git"
-  },
-  "bugs": {
-    "url": "https://github.com/soleneviogeat/P3_Ohmyfood_Giry-ducluzeau_Solene/issues"
-  },
-  "homepage": "https://github.com/soleneviogeat/P3_Ohmyfood_Giry-ducluzeau_Solene#readme"
+  "browserslist": "last 4 versions"
 }

@@ -6,22 +6,25 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f2f2f2;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    background-color: #fcf9f9;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
 
     & p {
-        font-size: large;
+        font-size: 16px;
         margin-top: 0;
+        margin-bottom: 25px;
     }
 }
 
 button {
     color: white;
+    font-weight: bolder;
     border-radius: 30px;
     background: linear-gradient(#FF79DA, #9356DC);
     border: transparent;
-    padding: 20px;
+    padding: 15px 20px;
     font-family: 'Shrikhand', sans-serif;
 }

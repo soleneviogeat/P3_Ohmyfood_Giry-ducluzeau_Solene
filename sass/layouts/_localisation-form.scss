@@ -5,21 +5,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: lightgrey;
+    background-color: rgb(231, 229, 229);
     padding: 12px;
     width: 100%;
-    box-shadow: inset 0em .2em 2px grey;
+    box-shadow: inset 0em .1em 2px rgb(184, 184, 184);
+    
+    &-localisation {
+        padding-left: 30px;
+    }
 
     &-recherche {
         text-decoration: none;
-        background-color: lightgrey;
-        border: lightgrey;
+        background-color: rgb(231, 229, 229);
+        border: rgb(231, 229, 229);
         padding-left: 15px;
     }
 }
 
 ::placeholder {
-    text-align: center;
     font-weight: bold;
     color: black;
     font-size: 14px;

@@ -1,12 +1,30 @@
 .restaurants {
     padding: 30px 20px;
-    background-color: #f2f2f2;
+    background-color: #fcf9f9;
 
     &-orga {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        &-card a {
+            width: 100%;
+            height: auto;
+            text-decoration: none;
+            color: black;
+
+            & span {
+                position: relative;
+                bottom: 165px;
+                left: 235px;
+                background-color: #99E2D0;
+                color: green;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 3px;
+            }
+        }
     }
 
     /* Organisation des vignettes */
@@ -15,25 +33,7 @@
         list-style-type: none;
         width: 100%;
         padding-left: 0;
-    }
-
-    &-orga-card a {
-        width: 100%;
-        height: auto;
-        text-decoration: none;
-        color: black;
-    }
-
-    &-orga-card span {
-        position: relative;
-        bottom: 165px;
-        left: 260px;
-        background-color: #99E2D0;
-        color: green;
-        font-weight: bold;
-        padding: 6px 10px;
-        border-radius: 3px;
-    }
+    }  
 
     &-orga-card-image {
         height: 180px;
@@ -74,10 +74,40 @@
     &-orga-card-texte p {
         margin-top: 0;
     }
+}
 
-    .heart {
-        display: flex;
-        align-items: center;
-        font-size: 40px;
+@keyframes progress-bar {
+    0% {
+        transform: scaleX(0);
     }
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+    }
+    85%,100% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    padding-right: 20px;
+       
+    &:active {
+        & > .progress__bar {
+            animation: progress-bar 1000ms;
+        }
+    }
+
 }

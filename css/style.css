@@ -1,8 +1,13 @@
 @charset "UTF-8";
 /* Paramètres généraux du site web Ohmyfood */
 h1 {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 19px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -36,20 +41,22 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: lightgrey;
+  background-color: rgb(231, 229, 229);
   padding: 12px;
   width: 100%;
-  box-shadow: inset 0em 0.2em 2px grey;
+  box-shadow: inset 0em 0.1em 2px rgb(184, 184, 184);
+}
+.formulaire-localisation {
+  padding-left: 30px;
 }
 .formulaire-recherche {
   text-decoration: none;
-  background-color: lightgrey;
-  border: lightgrey;
+  background-color: rgb(231, 229, 229);
+  border: rgb(231, 229, 229);
   padding-left: 15px;
 }
 
 ::placeholder {
-  text-align: center;
   font-weight: bold;
   color: black;
   font-size: 14px;
@@ -63,22 +70,25 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #f2f2f2;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  background-color: #fcf9f9;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
 }
 .reservation p {
-  font-size: large;
+  font-size: 16px;
   margin-top: 0;
+  margin-bottom: 25px;
 }
 
 button {
   color: white;
+  font-weight: bolder;
   border-radius: 30px;
   background: linear-gradient(#FF79DA, #9356DC);
   border: transparent;
-  padding: 20px;
+  padding: 15px 20px;
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -91,7 +101,7 @@ button {
   width: 100%;
   margin-bottom: 30px;
   border-radius: 15px;
-  box-shadow: 5px 5px 10px grey;
+  box-shadow: 5px 5px 10px rgb(231, 229, 229);
 }
 
 .fonctionnement {
@@ -106,6 +116,14 @@ button {
 .fonctionnement-box {
   display: flex;
   justify-content: flex-start;
+  background-color: #fcf9f9;
+  padding: 5px 0px;
+}
+.fonctionnement-box:hover {
+  background: #e7d2ff;
+}
+.fonctionnement-box:hover .fonctionnement-box-icone {
+  color: #9356dc;
 }
 .fonctionnement-box a {
   display: flex;
@@ -119,12 +137,13 @@ button {
   justify-content: center;
   align-items: center;
   margin-left: -15px;
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
-  min-height: 30px;
+  width: 23px;
+  height: 23px;
+  min-width: 0px;
+  min-height: 0px;
   border-radius: 50%;
   color: white;
+  font-size: 15px;
   background-color: #9356dc;
 }
 .fonctionnement-box-icone {
@@ -132,21 +151,18 @@ button {
   justify-content: center;
   align-items: center;
   width: 20%;
-  font-size: 30px;
+  font-size: 20px;
   color: grey;
 }
 .fonctionnement-box-txt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 20px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: bolder;
   color: black;
 }
 
 .restaurants {
   padding: 30px 20px;
-  background-color: #f2f2f2;
+  background-color: #fcf9f9;
   /* Organisation des vignettes */
 }
 .restaurants-orga {
@@ -155,26 +171,26 @@ button {
   justify-content: space-around;
   align-items: center;
 }
-.restaurants ul {
-  list-style-type: none;
-  width: 100%;
-  padding-left: 0;
-}
 .restaurants-orga-card a {
   width: 100%;
   height: auto;
   text-decoration: none;
   color: black;
 }
-.restaurants-orga-card span {
+.restaurants-orga-card a span {
   position: relative;
   bottom: 165px;
-  left: 260px;
+  left: 235px;
   background-color: #99E2D0;
   color: green;
   font-weight: bold;
   padding: 6px 10px;
   border-radius: 3px;
+}
+.restaurants ul {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
 }
 .restaurants-orga-card-image {
   height: 180px;
@@ -210,10 +226,36 @@ button {
 .restaurants-orga-card-texte p {
   margin-top: 0;
 }
-.restaurants .heart {
+
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  17% {
+    transform: scaleX(0.18);
+  }
+  24% {
+    transform: scaleX(0.4);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.heart {
   display: flex;
+  justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 35px;
+  padding-right: 20px;
+}
+.heart:active > .progress__bar {
+  animation: progress-bar 1000ms;
 }
 
 .footer {
