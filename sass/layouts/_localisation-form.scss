@@ -6,9 +6,10 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(231, 229, 229);
-    padding: 12px;
     width: 100%;
     box-shadow: inset 0em .1em 2px rgb(184, 184, 184);
+    padding-top: 12px;
+    padding-bottom: 12px;
     
     &-localisation {
         padding-left: 30px;

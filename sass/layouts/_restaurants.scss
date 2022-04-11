@@ -16,8 +16,9 @@
 
             & span {
                 position: relative;
-                bottom: 165px;
-                left: 235px;
+                width: fit-content;
+                top: 3rem;
+                right: 1rem;
                 background-color: #99E2D0;
                 color: green;
                 font-weight: bold;
@@ -26,6 +27,12 @@
             }
         }
     }
+
+.img-new {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
     /* Organisation des vignettes */
 
@@ -36,6 +43,7 @@
     }  
 
     &-orga-card-image {
+        z-index: 1;
         height: 180px;
         width: 100%;
         border-radius: 15px 15px 0px 0px;

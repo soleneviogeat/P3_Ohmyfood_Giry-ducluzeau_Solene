@@ -1,0 +1,492 @@
+@charset "UTF-8";
+/* Paramètres généraux du site web Ohmyfood */
+h1 {
+  font-size: 21px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Mise en page du header */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo {
+  width: 40%;
+  padding: 12px;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mise en page du formulaire dans le header */
+.formulaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e7e5e5;
+  width: 100%;
+  -webkit-box-shadow: inset 0em 0.1em 2px #b8b8b8;
+          box-shadow: inset 0em 0.1em 2px #b8b8b8;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.formulaire-localisation {
+  padding-left: 30px;
+}
+
+.formulaire-recherche {
+  text-decoration: none;
+  background-color: #e7e5e5;
+  border: #e7e5e5;
+  padding-left: 15px;
+}
+
+::-webkit-input-placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  font-family: 'Shrikhand', sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  font-family: 'Shrikhand', sans-serif;
+}
+
+::-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  font-family: 'Shrikhand', sans-serif;
+}
+
+::placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  font-family: 'Shrikhand', sans-serif;
+}
+
+/* Mise en page 3ème partie du header */
+.reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #fcf9f9;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+
+.reservation p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+button {
+  color: white;
+  font-weight: bolder;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: transparent;
+  padding: 15px 20px;
+  font-family: 'Shrikhand', sans-serif;
+}
+
+/* Paramètres des box */
+.box {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  height: auto;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px #e7e5e5;
+          box-shadow: 5px 5px 10px #e7e5e5;
+}
+
+.fonctionnement {
+  padding: 30px 20px;
+}
+
+.fonctionnement-orga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fonctionnement-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #fcf9f9;
+  padding: 5px 0px;
+}
+
+.fonctionnement-box:hover {
+  background: #e7d2ff;
+}
+
+.fonctionnement-box:hover .fonctionnement-box-icone {
+  color: #9356dc;
+}
+
+.fonctionnement-box a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+.fonctionnement-box-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -15px;
+  width: 23px;
+  height: 23px;
+  min-width: 0px;
+  min-height: 0px;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  background-color: #9356dc;
+}
+
+.fonctionnement-box-icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  font-size: 20px;
+  color: grey;
+}
+
+.fonctionnement-box-txt {
+  font-size: 15px;
+  font-weight: bolder;
+  color: black;
+}
+
+.restaurants {
+  padding: 30px 20px;
+  background-color: #fcf9f9;
+  /* Organisation des vignettes */
+}
+
+.restaurants-orga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurants-orga-card a {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  color: black;
+}
+
+.restaurants-orga-card a span {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 3rem;
+  right: 1rem;
+  background-color: #99E2D0;
+  color: green;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.restaurants .img-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.restaurants ul {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+.restaurants-orga-card-image {
+  z-index: 1;
+  height: 180px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 130%;
+     object-position: 50% 130%;
+}
+
+.restaurants-orga-card-image1 {
+  height: 180px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 110%;
+     object-position: 50% 110%;
+}
+
+.restaurants-orga-card-image2 {
+  height: 180px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+
+.restaurants-orga-card-texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.restaurants-orga-card-texte h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.restaurants-orga-card-texte p {
+  margin-top: 0;
+}
+
+@-webkit-keyframes progress-bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  17% {
+    -webkit-transform: scaleX(0.18);
+            transform: scaleX(0.18);
+  }
+  24% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  46% {
+    -webkit-transform: scaleX(0.81);
+            transform: scaleX(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  17% {
+    -webkit-transform: scaleX(0.18);
+            transform: scaleX(0.18);
+  }
+  24% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  46% {
+    -webkit-transform: scaleX(0.81);
+            transform: scaleX(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 35px;
+  padding-right: 20px;
+}
+
+.heart:active > .progress__bar {
+  -webkit-animation: progress-bar 1000ms;
+          animation: progress-bar 1000ms;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 20px;
+  background-color: #3a3a3a;
+  color: white;
+}
+
+.footer-logo {
+  width: 35%;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-info span {
+  width: 5%;
+}
+
+.footer-info p {
+  margin-left: 15px;
+}
+/*# sourceMappingURL=main.css.map */
