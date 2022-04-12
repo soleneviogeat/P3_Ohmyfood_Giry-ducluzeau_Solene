@@ -35,6 +35,13 @@ header {
   height: 100%;
 }
 
+/* Mise en page de la bannière d'image sur les pages des restaurants */
+.banniere-img img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* Mise en page du formulaire dans le header */
 .formulaire {
   display: flex;
@@ -83,6 +90,7 @@ header {
   margin-bottom: 25px;
 }
 
+/* Design bouton dégradé */
 button {
   color: white;
   font-weight: bolder;
@@ -97,7 +105,6 @@ button {
 .box {
   display: grid;
   align-items: center;
-  justify-items: center;
   height: auto;
   width: 100%;
   margin-bottom: 30px;
@@ -263,6 +270,18 @@ button {
 }
 .heart:active > .progress__bar {
   animation: progress-bar 1000ms;
+}
+
+/* Mise en page des menus */
+.menu {
+  border: 2px red solid;
+  border-radius: 35px 35px 0px 0px;
+  margin-top: -32px;
+}
+
+.menu-title {
+  display: inline-block;
+  flex-direction: row;
 }
 
 .footer {
