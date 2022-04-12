@@ -11,6 +11,20 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 
+h3 {
+  font-size: 29px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 19px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -40,6 +54,7 @@ header {
   height: 250px;
   width: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 
 /* Mise en page du formulaire dans le header */
@@ -274,14 +289,29 @@ button {
 
 /* Mise en page des menus */
 .menu {
-  border: 2px red solid;
   border-radius: 35px 35px 0px 0px;
   margin-top: -32px;
+  display: inline-block;
+  background-color: white;
+  padding: 0px 20px;
 }
 
 .menu-title {
-  display: inline-block;
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+.entrees-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .footer {
@@ -303,13 +333,20 @@ button {
 }
 .footer p {
   font-size: 18px;
+  padding-bottom: 0;
   margin-bottom: 0;
+  padding-top: 0;
+  margin-top: 8px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
 }
 .footer-info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 }
 .footer-info span {
   width: 5%;

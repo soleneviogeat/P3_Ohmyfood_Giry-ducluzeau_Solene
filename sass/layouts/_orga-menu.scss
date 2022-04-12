@@ -1,16 +1,32 @@
 /* Mise en page des menus */
 
 .menu {
-    border: 2px red solid;
     border-radius: 35px 35px 0px 0px;
     margin-top: -32px;
-    
+    display: inline-block;
+    background-color: white;
+    padding: 0px 20px;
 }
 
 .menu-title {
-    display: inline-block;
+    display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
+
+.entrees-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    
+}
+
 
 
 

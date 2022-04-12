@@ -11,6 +11,20 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+  font-size: 29px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 19px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,6 +64,7 @@ header {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
 }
 
 /* Mise en page du formulaire dans le header */
@@ -451,17 +466,48 @@ button {
 
 /* Mise en page des menus */
 .menu {
-  border: 2px red solid;
   border-radius: 35px 35px 0px 0px;
   margin-top: -32px;
+  display: inline-block;
+  background-color: white;
+  padding: 0px 20px;
 }
 
 .menu-title {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.entrees-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .footer {
@@ -493,7 +539,15 @@ button {
 
 .footer p {
   font-size: 18px;
+  padding-bottom: 0;
   margin-bottom: 0;
+  padding-top: 0;
+  margin-top: 8px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
 }
 
 .footer-info {
@@ -507,9 +561,9 @@ button {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .footer-info span {
