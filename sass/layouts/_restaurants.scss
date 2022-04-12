@@ -6,9 +6,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;
+        align-items: center;        
 
-        &-card a {
+        &-card {
             width: 100%;
             height: auto;
             text-decoration: none;
@@ -43,7 +43,6 @@
     }  
 
     &-orga-card-image {
-        z-index: 1;
         height: 180px;
         width: 100%;
         border-radius: 15px 15px 0px 0px;
@@ -76,7 +75,7 @@
 
     &-orga-card-texte h2 {
         margin-top: 0;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
     }
 
     &-orga-card-texte p {
