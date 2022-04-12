@@ -32,14 +32,10 @@ body {
 }
 
 /* Mise en page du header */
-header {
+.header-accueil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -48,7 +44,28 @@ header {
           align-items: center;
 }
 
+.header-resto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+.header-arrow {
+  font-size: 25px;
+}
+
 .header-logo {
+  display: block;
   width: 40%;
   padding: 12px;
 }
@@ -168,6 +185,15 @@ button {
   border: transparent;
   padding: 15px 20px;
   font-family: 'Shrikhand', sans-serif;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Paramètres des box */
@@ -470,7 +496,8 @@ button {
   margin-top: -32px;
   display: inline-block;
   background-color: white;
-  padding: 0px 20px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
 }
 
 .menu-title {
@@ -485,7 +512,7 @@ button {
       justify-content: space-around;
 }
 
-.entrees-description {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,9 +520,13 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
 }
 
-.card {
+.entrees-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,11 +534,10 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .footer {

@@ -32,15 +32,26 @@ body {
 }
 
 /* Mise en page du header */
-header {
+.header-accueil {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.header-resto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+}
+
+.header-arrow {
+  font-size: 25px;
+}
+
 .header-logo {
-  width: 40%;
+  width: 45%;
   padding: 12px;
 }
 
@@ -114,6 +125,11 @@ button {
   border: transparent;
   padding: 15px 20px;
   font-family: "Shrikhand", sans-serif;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
 }
 
 /* Paramètres des box */
@@ -293,7 +309,8 @@ button {
   margin-top: -32px;
   display: inline-block;
   background-color: white;
-  padding: 0px 20px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
 }
 
 .menu-title {
@@ -302,16 +319,18 @@ button {
   justify-content: space-around;
 }
 
-.entrees-description {
-  display: flex;
-  flex-direction: column;
-}
-
 .card {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.entrees-price {
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer {
