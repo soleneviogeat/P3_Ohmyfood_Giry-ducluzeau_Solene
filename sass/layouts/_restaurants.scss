@@ -15,10 +15,9 @@
             color: black;
 
             & span {
-                position: relative;
+                position: absolute;
                 width: fit-content;
-                top: 3rem;
-                right: 1rem;
+                margin: .7rem;
                 background-color: #99E2D0;
                 color: green;
                 font-weight: bold;
