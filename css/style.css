@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Variables pour l'animation de l'arrivée des cartes sur les pages restaurants */
+/* Variables couleurs */
+/* Variable box shadow */
+/* Mixin effet des boutons principaux */
 /* Paramètres généraux du site web Ohmyfood */
 h1 {
   font-size: 21px;
@@ -135,8 +139,7 @@ button {
   box-shadow: 5px 5px 10px rgb(231, 229, 229);
 }
 button:hover {
-  box-shadow: 5px 5px 10px rgb(189, 189, 189);
-  /* créer une mixin avec 10% plus clair */
+  background-color: blue;
 }
 
 .button {
@@ -352,17 +355,8 @@ button:hover {
 
 @keyframes entrees-animation {
   0% {
-    transform: translateY(100px) translateX(100px);
+    transform: translateY(-100px) translateX(150px);
   }
-  /*17% {
-      transform: translateY(.5);
-  }
-  24% {
-      transform: translateY(1);
-  }
-  46% {
-      transform: translateY(1.125);
-  }*/
   100% {
     transform: translateY(0);
   }
@@ -373,17 +367,8 @@ button:hover {
 
 @keyframes plats-animation {
   0% {
-    transform: translateY(100px) translateX(100px);
+    transform: translateY(-100px) translateX(150px);
   }
-  /*17% {
-      transform: translateY(.5);
-  }
-  24% {
-      transform: translateY(1);
-  }
-  46% {
-      transform: translateY(1.125);
-  }*/
   100% {
     transform: translateY(0);
   }
@@ -394,17 +379,8 @@ button:hover {
 
 @keyframes desserts-animation {
   0% {
-    transform: translateY(100px) translateX(0px);
+    transform: translateY(-100px) translateX(150px);
   }
-  /*17% {
-      transform: translateY(.5);
-  }
-  24% {
-      transform: translateY(1);
-  }
-  46% {
-      transform: translateY(1.125);
-  }*/
   100% {
     transform: translateY(0);
   }
