@@ -18,17 +18,23 @@
 .card {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    padding: 15px;
+    padding: 10px;
+
+    & p {
+        margin: 4px;
+    }
     
+    &-price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 
-.entrees-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
+
 
 
 
