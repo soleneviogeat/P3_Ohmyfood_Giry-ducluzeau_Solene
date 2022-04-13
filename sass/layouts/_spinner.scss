@@ -30,30 +30,39 @@
 } */
 
 .spinner {
-
+  position: absolute;
   border: 16px solid #f3f3f3;
   border-top: 16px solid #3498db;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  animation: spin 2s linear $prog-spin-delay;
-  &:animation: > .le-reste-du-monde {
-    display: none;
-  }
-
-  
-
- 
+  top: 35%;
+  left: 20%;
+  animation: spin $prog-spin-dur linear $prog-spin-delay;
+  transform: rotate(0);
+  opacity: 0;
 }
 
 @keyframes spin {
   0% { 
     transform: rotate(0deg); 
+    opacity: 1;
   }
   100% { 
     transform: rotate(360deg); 
+    opacity: 0;
+  }
+}
+
+.le-reste-du-monde {
+  animation: body $body-delay;  
+}
+
+@keyframes body {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
