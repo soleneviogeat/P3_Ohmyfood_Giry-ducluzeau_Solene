@@ -19,9 +19,11 @@ h4 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 17px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #99E2D0;
-   display: inline-block;
+    
+    & span {
+        border-bottom: 3px solid #99E2D0;
+        padding-bottom: 5px;
+    }
 }
 
 .bold {
