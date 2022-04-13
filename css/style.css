@@ -132,6 +132,11 @@ button {
   border: transparent;
   padding: 15px 20px;
   font-family: "Shrikhand", sans-serif;
+  box-shadow: 5px 5px 10px rgb(231, 229, 229);
+}
+button:hover {
+  box-shadow: 5px 5px 10px rgb(189, 189, 189);
+  /* créer une mixin avec 10% plus clair */
 }
 
 .button {
@@ -343,6 +348,69 @@ button {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+@keyframes entrees-animation {
+  0% {
+    transform: translateY(100px) translateX(100px);
+  }
+  /*17% {
+      transform: translateY(.5);
+  }
+  24% {
+      transform: translateY(1);
+  }
+  46% {
+      transform: translateY(1.125);
+  }*/
+  100% {
+    transform: translateY(0);
+  }
+}
+.entrees-animation {
+  animation: entrees-animation 1200ms 0ms;
+}
+
+@keyframes plats-animation {
+  0% {
+    transform: translateY(100px) translateX(100px);
+  }
+  /*17% {
+      transform: translateY(.5);
+  }
+  24% {
+      transform: translateY(1);
+  }
+  46% {
+      transform: translateY(1.125);
+  }*/
+  100% {
+    transform: translateY(0);
+  }
+}
+.plats-animation {
+  animation: plats-animation 1200ms 0ms;
+}
+
+@keyframes desserts-animation {
+  0% {
+    transform: translateY(100px) translateX(0px);
+  }
+  /*17% {
+      transform: translateY(.5);
+  }
+  24% {
+      transform: translateY(1);
+  }
+  46% {
+      transform: translateY(1.125);
+  }*/
+  100% {
+    transform: translateY(0);
+  }
+}
+.desserts-animation {
+  animation: desserts-animation 1200ms 0ms;
 }
 
 .footer {

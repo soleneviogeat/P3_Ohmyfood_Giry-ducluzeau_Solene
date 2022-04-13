@@ -8,6 +8,11 @@ button {
     border: transparent;
     padding: 15px 20px;
     font-family: 'Shrikhand', sans-serif;
+    box-shadow: 5px 5px 10px rgb(231, 229, 229);
+    &:hover{
+        box-shadow: 5px 5px 10px rgb(189, 189, 189);
+        /* créer une mixin avec 10% plus clair */
+    }
 }
 
 .button {

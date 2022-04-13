@@ -15,6 +15,9 @@
     justify-content: space-around;
 }
 
+$prog-card-dur: 1200ms;
+$prog-card-delay: 0ms;
+
 .card {
     display: flex;
     flex-direction: column;
@@ -33,6 +36,74 @@
         width: 100%;
     }
 }
+
+
+@keyframes entrees-animation {
+    0% {
+        transform: translateY(100px) translateX(100px);
+    }    
+    /*17% {
+        transform: translateY(.5);
+    }
+    24% {
+        transform: translateY(1);
+    }
+    46% {
+        transform: translateY(1.125);
+    }*/
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.entrees-animation {
+    animation: entrees-animation $prog-card-dur $prog-card-delay;
+}
+
+@keyframes plats-animation {
+    0% {
+        transform: translateY(100px) translateX(100px);
+    }    
+    /*17% {
+        transform: translateY(.5);
+    }
+    24% {
+        transform: translateY(1);
+    }
+    46% {
+        transform: translateY(1.125);
+    }*/
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.plats-animation {
+    animation: plats-animation $prog-card-dur $prog-card-delay;
+}
+
+@keyframes desserts-animation {
+    0% {
+        transform: translateY(100px) translateX(00px);
+    }    
+    /*17% {
+        transform: translateY(.5);
+    }
+    24% {
+        transform: translateY(1);
+    }
+    46% {
+        transform: translateY(1.125);
+    }*/
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.desserts-animation {
+    animation: desserts-animation $prog-card-dur $prog-card-delay;
+}
+
 
 
 
