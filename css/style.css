@@ -53,6 +53,9 @@ body {
 .header-arrow {
   font-size: 25px;
 }
+.header-arrow a {
+  color: black;
+}
 
 .header-logo {
   width: 45%;

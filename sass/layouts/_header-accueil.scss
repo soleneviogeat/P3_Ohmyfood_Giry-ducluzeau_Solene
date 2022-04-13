@@ -16,6 +16,10 @@
 
 .header-arrow {
   font-size: 25px;
+
+  & a {
+    color: black;
+  }
 }
 
 .header-logo {
