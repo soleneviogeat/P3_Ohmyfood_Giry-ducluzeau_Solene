@@ -8,10 +8,13 @@ button {
     border: transparent;
     padding: 15px 20px;
     font-family: 'Shrikhand', sans-serif;
+    
 }
 
 .button {
     display: flex;
     justify-content: center;
-    
+    &-com {
+        width: 48%;
+    }
 }
