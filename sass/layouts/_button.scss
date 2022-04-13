@@ -7,7 +7,8 @@ button {
     background: $color-button;
     border: transparent;
     padding: 15px 20px;
-    box-shadow: $box-shadow-size;
+    box-shadow: $box-shadow-size $color-box-shadow;
+    cursor: pointer;
     &:hover{
         @include button-anim;
     }
