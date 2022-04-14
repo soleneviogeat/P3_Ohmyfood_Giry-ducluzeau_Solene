@@ -4,7 +4,7 @@
     border-radius: 35px 35px 0px 0px;
     margin-top: -32px;
     display: inline-block;
-    background-color: white;
+    background-color: #fcf9f9;
     padding: 10px 20px;
     margin-bottom: 50px;
 }
@@ -15,22 +15,67 @@
     justify-content: space-around;
 }
 
+.entrees-animation a {
+    text-decoration: none;
+    color: black;
+}
+
 .card {
     display: flex;
-    flex-direction: column;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
+    overflow: hidden;
+    
+    &-description {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
 
-    & p {
-        margin: 4px;
+        & p {            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 4px;
+        }
     }
     
     &-price {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+        align-items: flex-end;
+        margin-left: auto;
+        font-weight: 600;  
+        padding: 13px;
+    }
+
+    &-check {
+        display: grid;
+        place-items: center;
+        background-color: #99E2D0;
+        margin-right: -65px;
+        width: 65px;
+        transition: margin-right 500ms;
+        & span {
+            display: grid;
+            place-items: center;
+            background-color: white;
+            color: #99E2D0;
+            height: 26px;
+            width: 26px; 
+            border-radius: 25px;
+        }
+    }
+
+    &:active {
+
+        .card-check {
+            margin-right: 0;
+
+            & span {
+                animation: check 500ms ease-in-out;
+            }
+        }
     }
 }
 
@@ -75,8 +120,13 @@
 }
 
 
-
-
-
+@keyframes check {
+    0% {
+        transform: rotate(-270deg);
+    }    
+    100% {
+        transform: rotate(0);
+    }
+}
 
 

@@ -25,14 +25,23 @@ h4 {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 17px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-h4 span {
-  border-bottom: 3px solid #99E2D0;
-  padding-bottom: 5px;
+h4::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  height: 3px;
+  width: 45px;
+  background-color: #99E2D0;
 }
 
-.bold {
-  font-weight: bold;
+h5 {
+  font-size: 16px;
+  margin: 5px;
 }
 
 body {
@@ -42,34 +51,6 @@ body {
 }
 
 /* Mise en place loading spinner */
-/*@keyframes spin {
-    0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-  }
-
-  .spinner {
-    position: relative;
-
-    &::before {
-
-    animation: linear spin $prog-spin-dur $prog-spin-delay;
-    animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: #1c87c9;
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
-  } 
-} */
 .spinner {
   position: absolute;
   border: 16px solid #f3f3f3;
@@ -220,7 +201,6 @@ button:hover {
 /* Paramètres des box */
 .box {
   display: grid;
-  align-items: center;
   height: auto;
   margin-bottom: 30px;
   border-radius: 15px;
@@ -392,7 +372,7 @@ button:hover {
   border-radius: 35px 35px 0px 0px;
   margin-top: -32px;
   display: inline-block;
-  background-color: white;
+  background-color: #fcf9f9;
   padding: 10px 20px;
   margin-bottom: 50px;
 }
@@ -403,21 +383,58 @@ button:hover {
   justify-content: space-around;
 }
 
+.entrees-animation a {
+  text-decoration: none;
+  color: black;
+}
+
 .card {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   justify-content: center;
-  align-items: flex-start;
-  padding: 10px;
+  overflow: hidden;
 }
-.card p {
+.card-description {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 4px;
 }
 .card-price {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  align-items: flex-end;
+  margin-left: auto;
+  font-weight: 600;
+  padding: 13px;
+}
+.card-check {
+  display: grid;
+  place-items: center;
+  background-color: #99E2D0;
+  margin-right: -65px;
+  width: 65px;
+  transition: margin-right 500ms;
+}
+.card-check span {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: #99E2D0;
+  height: 26px;
+  width: 26px;
+  border-radius: 25px;
+}
+.card:active .card-check {
+  margin-right: 0;
+}
+.card:active .card-check span {
+  animation: check 500ms ease-in-out;
 }
 
 @keyframes entrees-animation {
@@ -456,6 +473,14 @@ button:hover {
   animation: desserts-animation 1200ms 0ms;
 }
 
+@keyframes check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;

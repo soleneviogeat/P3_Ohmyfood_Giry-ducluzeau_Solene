@@ -1,34 +1,5 @@
  /* Mise en place loading spinner */
 
- /*@keyframes spin {
-    0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-  }
-
-  .spinner {
-    position: relative;
-
-    &::before {
-    
-    animation: linear spin $prog-spin-dur $prog-spin-delay;
-    animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: #1c87c9;
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
-  } 
-} */
-
 .spinner {
   position: absolute;
   border: 16px solid #f3f3f3;
