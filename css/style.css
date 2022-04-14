@@ -337,6 +337,14 @@ button:hover {
   margin-top: 0;
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .heart {
   display: flex;
   justify-content: center;
@@ -349,14 +357,13 @@ button:hover {
   position: absolute;
 }
 .heart-filled {
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  position: absolute;
   opacity: 0;
-  transition: translateY 200ms;
-  color: transparent;
+  color: #9356DC;
 }
-.heart:hover .heart-filled {
+.heart-filled:hover {
   opacity: 1;
-  animation: all 200ms;
+  animation: heart 1000ms;
 }
 
 /* Mise en page des menus */

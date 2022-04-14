@@ -82,6 +82,15 @@
     }
 }
 
+@keyframes heart {
+    0% {
+        opacity: 0;
+    }    
+    100% {
+        opacity: 1;
+    }
+}
+
 .heart {
     display: flex;
     justify-content: center;
@@ -95,19 +104,14 @@
     }
        
     &-filled {
-      
-        background-image: $color-button;
+        position: absolute;
         opacity: 0;
-        transition: translateY 200ms;
-        color: transparent;
-    }
+        color: #9356DC;
 
-    &:hover {
-        .heart-filled {
+        &:hover {
             opacity: 1;
-            animation: all 200ms;
-            
+            animation: heart 1000ms;
         }
     }
-
 }
+
