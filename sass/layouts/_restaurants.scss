@@ -14,7 +14,7 @@
             text-decoration: none;
             color: black;
 
-            & span {
+            .new {
                 position: absolute;
                 width: fit-content;
                 margin: .7rem;
@@ -82,37 +82,31 @@
     }
 }
 
-@keyframes progress-bar {
-    0% {
-        transform: scaleX(0);
-    }
-    17% {
-        transform: scaleX(.18);
-    }
-    24% {
-        transform: scaleX(.4);
-    }
-    46% {
-        transform: scaleX(.81);
-    }
-    85%,100% {
-        opacity: 1;
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
-
 .heart {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 35px;
     padding-right: 20px;
+    position: relative;
+
+    &-vacuum {
+        position: absolute;
+    }
        
-    &:active {
-        & > .progress__bar {
-            animation: progress-bar 1000ms;
+    &-filled {
+      
+        background-image: $color-button;
+        opacity: 0;
+        transition: translateY 200ms;
+        color: transparent;
+    }
+
+    &:hover {
+        .heart-filled {
+            opacity: 1;
+            animation: all 200ms;
+            
         }
     }
 

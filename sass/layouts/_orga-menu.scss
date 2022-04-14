@@ -15,24 +15,18 @@
     justify-content: space-around;
 }
 
-.entrees-animation a {
-    text-decoration: none;
-    color: black;
-}
-
 .card {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
     
     &-description {
         display: flex;
-        flex-flow: column nowrap;
+        flex-direction: column;
         padding: 10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
+        overflow: hidden;        
 
         & p {            
             overflow: hidden;
@@ -56,6 +50,7 @@
         margin-right: -65px;
         width: 65px;
         transition: margin-right 500ms;
+
         & span {
             display: grid;
             place-items: center;
@@ -67,14 +62,22 @@
         }
     }
 
-    &:active {
+    &:hover {
 
         .card-check {
             margin-right: 0;
+            width: 25%;
 
             & span {
+                
                 animation: check 500ms ease-in-out;
             }
+        }
+
+        .card-description, h5 {
+            width: 65%;
+            white-space: nowrap;   
+            text-overflow: ellipsis;
         }
     }
 }

@@ -26,8 +26,6 @@ h4 {
   font-weight: normal;
   font-size: 17px;
   position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 h4::after {
   content: "";
@@ -40,8 +38,11 @@ h4::after {
 }
 
 h5 {
-  font-size: 16px;
-  margin: 5px;
+  font-size: 17px;
+  margin: 0;
+  margin-left: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body {
@@ -281,7 +282,7 @@ button:hover {
   text-decoration: none;
   color: black;
 }
-.restaurants-orga-card span {
+.restaurants-orga-card .new {
   position: absolute;
   width: fit-content;
   margin: 0.7rem;
@@ -336,35 +337,26 @@ button:hover {
   margin-top: 0;
 }
 
-@keyframes progress-bar {
-  0% {
-    transform: scaleX(0);
-  }
-  17% {
-    transform: scaleX(0.18);
-  }
-  24% {
-    transform: scaleX(0.4);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
 .heart {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 35px;
   padding-right: 20px;
+  position: relative;
 }
-.heart:active > .progress__bar {
-  animation: progress-bar 1000ms;
+.heart-vacuum {
+  position: absolute;
+}
+.heart-filled {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+  transition: translateY 200ms;
+  color: transparent;
+}
+.heart:hover .heart-filled {
+  opacity: 1;
+  animation: all 200ms;
 }
 
 /* Mise en page des menus */
@@ -383,23 +375,18 @@ button:hover {
   justify-content: space-around;
 }
 
-.entrees-animation a {
-  text-decoration: none;
-  color: black;
-}
-
 .card {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   overflow: hidden;
+  cursor: pointer;
 }
 .card-description {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   padding: 10px;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card-description p {
   overflow: hidden;
@@ -430,11 +417,17 @@ button:hover {
   width: 26px;
   border-radius: 25px;
 }
-.card:active .card-check {
+.card:hover .card-check {
   margin-right: 0;
+  width: 25%;
 }
-.card:active .card-check span {
+.card:hover .card-check span {
   animation: check 500ms ease-in-out;
+}
+.card:hover .card-description, .card:hover h5 {
+  width: 65%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @keyframes entrees-animation {
