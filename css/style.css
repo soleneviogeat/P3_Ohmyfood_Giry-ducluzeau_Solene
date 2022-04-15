@@ -64,7 +64,7 @@ body {
   height: 200px;
   top: 30%;
   left: 20%;
-  animation: spin 3000ms linear 0ms;
+  animation: spin 2000ms linear 0ms;
   transform: rotate(0);
   opacity: 0;
 }
@@ -283,7 +283,7 @@ button:hover {
   width: 100%;
   height: auto;
   text-decoration: none;
-  color: black;
+  cursor: pointer;
 }
 .restaurants-orga-card .new {
   position: absolute;
@@ -335,9 +335,11 @@ button:hover {
 .restaurants-orga-card-texte h2 {
   margin-top: 0;
   margin-bottom: 0px;
+  color: black;
 }
 .restaurants-orga-card-texte p {
   margin-top: 0;
+  color: black;
 }
 
 @keyframes heart {
@@ -349,22 +351,25 @@ button:hover {
   }
 }
 .heart {
+  width: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 35px;
-  padding-right: 20px;
-  position: relative;
 }
 .heart-vacuum {
   position: absolute;
 }
+.heart-vacuum:hover {
+  opacity: 0;
+}
 .heart-filled {
   position: absolute;
-  opacity: 0;
+  color: #FF79DA;
   background-clip: text;
   -webkit-background-clip: text;
-  color: #99E2D0;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 .heart-filled:hover {
   opacity: 1;

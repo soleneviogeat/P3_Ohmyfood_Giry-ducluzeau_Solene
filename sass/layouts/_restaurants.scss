@@ -12,7 +12,7 @@
             width: 100%;
             height: auto;
             text-decoration: none;
-            color: black;
+            cursor: pointer;
 
             .new {
                 position: absolute;
@@ -75,10 +75,12 @@
     &-orga-card-texte h2 {
         margin-top: 0;
         margin-bottom: 0px;
+        color: black;
     }
 
     &-orga-card-texte p {
         margin-top: 0;
+        color: black;
     }
 }
 
@@ -92,23 +94,29 @@
 }
 
 .heart {
+    width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    padding-right: 20px;
-    position: relative;
 
     &-vacuum {
         position: absolute;
+        
+        &:hover {
+            opacity: 0;
+        }
     }
        
     &-filled {
         position: absolute;
-        opacity: 0;
+       
+        color: #FF79DA;
         background-clip: text;
         -webkit-background-clip: text;
-        color: #99E2D0;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+              
 
         &:hover {
             opacity: 1;
