@@ -55,15 +55,18 @@ body {
 /* Mise en place loading spinner */
 .spinner {
   position: absolute;
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
+  border: 16px solid #0042A4;
   border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #96BFF9;
+  border-left: 16px solid #99E2D0;
   width: 200px;
   height: 200px;
-  top: 35%;
+  top: 30%;
   left: 20%;
-  -webkit-animation: spin 1500ms linear 0ms;
-          animation: spin 1500ms linear 0ms;
+  -webkit-animation: spin 3000ms linear 0ms;
+          animation: spin 3000ms linear 0ms;
   -webkit-transform: rotate(0);
           transform: rotate(0);
   opacity: 0;
@@ -96,24 +99,24 @@ body {
 }
 
 .le-reste-du-monde {
-  -webkit-animation: body 10000ms;
-          animation: body 10000ms;
+  -webkit-animation: body 7000ms;
+          animation: body 7000ms;
 }
 
 @-webkit-keyframes body {
   0% {
-    opacity: 0;
+    opacity: 0.2;
   }
-  50% {
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes body {
   0% {
-    opacity: 0;
+    opacity: 0.2;
   }
-  50% {
+  100% {
     opacity: 1;
   }
 }
