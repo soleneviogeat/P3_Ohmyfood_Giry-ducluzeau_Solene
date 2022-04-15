@@ -106,7 +106,9 @@
     &-filled {
         position: absolute;
         opacity: 0;
-        color: #9356DC;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: #99E2D0;
 
         &:hover {
             opacity: 1;

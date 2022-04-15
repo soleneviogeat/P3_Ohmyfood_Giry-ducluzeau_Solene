@@ -359,7 +359,9 @@ button:hover {
 .heart-filled {
   position: absolute;
   opacity: 0;
-  color: #9356DC;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #99E2D0;
 }
 .heart-filled:hover {
   opacity: 1;
@@ -411,9 +413,11 @@ button:hover {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
-  margin-right: -65px;
+  width: 0%;
+  transition: width 750ms;
+  /*margin-right: -65px;
   width: 65px;
-  transition: margin-right 500ms;
+  transition: margin-right 500ms;*/
 }
 .card-check span {
   display: grid;
@@ -425,55 +429,62 @@ button:hover {
   border-radius: 25px;
 }
 .card:hover .card-check {
-  margin-right: 0;
-  width: 25%;
+  width: 15%;
 }
 .card:hover .card-check span {
-  animation: check 500ms ease-in-out;
+  animation: rotate 750ms;
 }
-.card:hover .card-description, .card:hover h5 {
-  width: 65%;
+.card:hover .card-description {
   white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 60%;
+}
+.card:hover h5 {
+  white-space: nowrap;
 }
 
-@keyframes entrees-animation {
+@keyframes entrees {
   0% {
     transform: translateY(-100px) translateX(150px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 .entrees-animation {
-  animation: entrees-animation 1200ms 0ms;
+  animation: entrees 1800ms 0ms;
 }
 
-@keyframes plats-animation {
+@keyframes plats {
   0% {
     transform: translateY(-100px) translateX(150px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 .plats-animation {
-  animation: plats-animation 1200ms 0ms;
+  animation: plats 1800ms 0ms;
 }
 
-@keyframes desserts-animation {
+@keyframes desserts {
   0% {
     transform: translateY(-100px) translateX(150px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 .desserts-animation {
-  animation: desserts-animation 1200ms 0ms;
+  animation: desserts 1800ms 0ms;
 }
 
-@keyframes check {
+@keyframes rotate {
   0% {
     transform: rotate(-270deg);
   }

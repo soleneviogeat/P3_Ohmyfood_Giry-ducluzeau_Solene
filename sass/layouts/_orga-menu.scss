@@ -6,7 +6,7 @@
     display: inline-block;
     background-color: #fcf9f9;
     padding: 10px 20px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;    
 }
 
 .menu-title {
@@ -47,9 +47,11 @@
         display: grid;
         place-items: center;
         background-color: #99E2D0;
-        margin-right: -65px;
+        width: 0%;
+        transition: width 750ms;
+        /*margin-right: -65px;
         width: 65px;
-        transition: margin-right 500ms;
+        transition: margin-right 500ms;*/
 
         & span {
             display: grid;
@@ -65,65 +67,72 @@
     &:hover {
 
         .card-check {
-            margin-right: 0;
-            width: 25%;
-
+            width: 15%;
+            
             & span {
-                
-                animation: check 500ms ease-in-out;
+                animation: rotate 750ms;
             }
         }
 
-        .card-description, h5 {
-            width: 65%;
+        .card-description {
             white-space: nowrap;   
-            text-overflow: ellipsis;
+            width: 60%;
+        }
+
+        h5 {
+            white-space: nowrap;   
         }
     }
 }
 
 
-@keyframes entrees-animation {
+@keyframes entrees {
     0% {
         transform: translateY(-100px) translateX(150px);
+        opacity: 0;
     }    
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 .entrees-animation {
-    animation: entrees-animation $prog-card-dur $prog-card-delay;
+    animation: entrees $prog-card-dur $prog-card-delay;
 }
 
-@keyframes plats-animation {
+@keyframes plats {
     0% {
         transform: translateY(-100px) translateX(150px);
+        opacity: 0;
     }    
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 .plats-animation {
-    animation: plats-animation $prog-card-dur $prog-card-delay;
+    animation: plats $prog-card-dur $prog-card-delay;
 }
 
-@keyframes desserts-animation {
+@keyframes desserts {
     0% {
         transform: translateY(-100px) translateX(150px);
+        opacity: 0;
     }    
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 .desserts-animation {
-    animation: desserts-animation $prog-card-dur $prog-card-delay;
+    animation: desserts $prog-card-dur $prog-card-delay;
 }
 
 
-@keyframes check {
+@keyframes rotate {
     0% {
         transform: rotate(-270deg);
     }    
@@ -131,5 +140,7 @@
         transform: rotate(0);
     }
 }
+
+
 
 
