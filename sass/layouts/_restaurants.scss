@@ -6,13 +6,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;        
+        align-items: center; 
+        
+        & a {
+           color: black;
+        }
 
         &-card {
             width: 100%;
             height: auto;
             text-decoration: none;
-            cursor: pointer;
+            cursor: pointer;            
 
             .new {
                 position: absolute;
@@ -100,24 +104,22 @@
     align-items: center;
     font-size: 35px;
 
-    &-vacuum {
+    .far {
         position: absolute;
+        font-weight: 100;
         
         &:hover {
             opacity: 0;
         }
     }
        
-    &-filled {
+    .fas {
         position: absolute;
-       
-        color: linear-gradient(#FF79DA, #9356DC);
+        color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         opacity: 0;
-        display: initial;
-              
+        background-image: linear-gradient(#9356DC, #FF79DA);    
 
         &:hover {
             opacity: 1;
