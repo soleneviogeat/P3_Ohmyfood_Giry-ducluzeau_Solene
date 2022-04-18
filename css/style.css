@@ -365,11 +365,12 @@ button:hover {
 }
 .heart-filled {
   position: absolute;
-  color: #FF79DA;
+  color: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  display: initial;
 }
 .heart-filled:hover {
   opacity: 1;
