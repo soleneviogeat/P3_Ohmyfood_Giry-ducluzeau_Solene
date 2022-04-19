@@ -79,11 +79,11 @@ body {
     opacity: 0;
   }
 }
-.le-reste-du-monde {
-  animation: body 7000ms;
+main {
+  animation: main 7000ms;
 }
 
-@keyframes body {
+@keyframes main {
   0% {
     opacity: 0.2;
   }
@@ -91,14 +91,25 @@ body {
     opacity: 1;
   }
 }
-/* Mise en page du header */
-.header-accueil {
+/* Mise en page du header de la page d'accueil */
+.header_accueil {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header-resto {
+.header__logo {
+  width: 45%;
+  padding: 12px;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mise en page du header de la page des pages menu */
+.header_menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -106,33 +117,23 @@ body {
   width: 85%;
 }
 
-.header-arrow {
+.header__arrow {
   font-size: 25px;
 }
-.header-arrow a {
+.header__arrow a {
   color: black;
 }
 
-.header-logo {
-  width: 45%;
-  padding: 12px;
-}
-
-.header-logo img {
-  width: 100%;
-  height: 100%;
-}
-
 /* Mise en page de la bannière d'image sur les pages des restaurants */
-.banniere-img img {
+.cover-image img {
   height: 250px;
   width: 100%;
   object-fit: cover;
   z-index: 1;
 }
 
-/* Mise en page du formulaire dans le header */
-.formulaire {
+/* Mise en page de la barre de localisation */
+.localisation {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -143,10 +144,10 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.formulaire-localisation {
+.localisation__icone {
   padding-left: 30px;
 }
-.formulaire-recherche {
+.localisation__recherche {
   text-decoration: none;
   background-color: rgb(231, 229, 229);
   border: rgb(231, 229, 229);
@@ -159,8 +160,8 @@ body {
   font-size: 14px;
 }
 
-/* Mise en page 3ème partie du header */
-.reservation {
+/* Mise en page de la courte présentation de l'entreprise */
+.presentation {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,7 +173,7 @@ body {
   padding-left: 20px;
   padding-bottom: 50px;
 }
-.reservation p {
+.presentation p {
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 25px;
@@ -198,7 +199,7 @@ button:hover {
   display: flex;
   justify-content: center;
 }
-.button-com {
+.button__title {
   width: 48%;
 }
 
@@ -214,33 +215,27 @@ button:hover {
 .fonctionnement {
   padding: 30px 20px;
 }
-.fonctionnement-orga {
+.fonctionnement_orga {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.fonctionnement-box {
+.fonctionnement__box {
   display: flex;
   justify-content: flex-start;
   width: 100%;
   background-color: #fcf9f9;
   padding: 5px 0px;
+  cursor: pointer;
 }
-.fonctionnement-box:hover {
+.fonctionnement__box:hover {
   background: #e7d2ff;
 }
-.fonctionnement-box:hover .fonctionnement-box-icone {
+.fonctionnement__box:hover .fonctionnement__icone {
   color: #9356dc;
 }
-.fonctionnement-box a {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-.fonctionnement-box-number {
+.fonctionnement__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,7 +249,7 @@ button:hover {
   font-size: 15px;
   background-color: #9356dc;
 }
-.fonctionnement-box-icone {
+.fonctionnement__icone {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,33 +257,56 @@ button:hover {
   font-size: 20px;
   color: grey;
 }
-.fonctionnement-box-txt {
+.fonctionnement__text {
   font-size: 15px;
   font-weight: bolder;
   color: black;
 }
+.fonctionnement a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  width: 100%;
+}
 
+/* Mise en page des 4 menus sous forme de cartes */
 .restaurants {
   padding: 30px 20px;
   background-color: #fcf9f9;
-  /* Organisation des vignettes */
 }
-.restaurants-orga {
+.restaurants_orga {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.restaurants-orga a {
+.restaurants_orga ul {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+}
+.restaurants_orga a {
   color: black;
 }
-.restaurants-orga-card {
+.restaurants__card {
   width: 100%;
   height: auto;
   text-decoration: none;
   cursor: pointer;
 }
-.restaurants-orga-card .new {
+.restaurants__image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.restaurants__image--layout {
+  height: 180px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+}
+.restaurants__nouveau {
   position: absolute;
   width: fit-content;
   margin: 0.7rem;
@@ -298,53 +316,23 @@ button:hover {
   padding: 6px 10px;
   border-radius: 3px;
 }
-.restaurants .img-new {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.restaurants ul {
-  list-style-type: none;
-  width: 100%;
-  padding-left: 0;
-}
-.restaurants-orga-card-image {
-  height: 180px;
-  width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-fit: cover;
-  object-position: 50% 130%;
-}
-.restaurants-orga-card-image1 {
-  height: 180px;
-  width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-fit: cover;
-  object-position: 50% 110%;
-}
-.restaurants-orga-card-image2 {
-  height: 180px;
-  width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-fit: cover;
-  object-position: 50% 60%;
-}
-.restaurants-orga-card-texte {
+.restaurants__texte {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 5px 10px;
 }
-.restaurants-orga-card-texte h2 {
+.restaurants__texte h2 {
   margin-top: 0;
   margin-bottom: 0px;
   color: black;
 }
-.restaurants-orga-card-texte p {
+.restaurants__texte p {
   margin-top: 0;
   color: black;
 }
 
+/* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
 @keyframes heart {
   0% {
     opacity: 0;
@@ -387,10 +375,10 @@ button:hover {
   display: inline-block;
   background-color: #fcf9f9;
   padding: 10px 20px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
-.menu-title {
+.menu__title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -403,35 +391,32 @@ button:hover {
   overflow: hidden;
   cursor: pointer;
 }
-.card-description {
+.card__description {
   display: flex;
   flex-direction: column;
   padding: 10px;
   overflow: hidden;
 }
-.card-description p {
+.card__description p {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 4px;
 }
-.card-price {
+.card__price {
   display: flex;
   align-items: flex-end;
   margin-left: auto;
   font-weight: 600;
   padding: 13px;
 }
-.card-check {
+.card__check {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
   width: 0%;
   transition: width 750ms;
-  /*margin-right: -65px;
-  width: 65px;
-  transition: margin-right 500ms;*/
 }
-.card-check span {
+.card__check span {
   display: grid;
   place-items: center;
   background-color: white;
@@ -440,13 +425,13 @@ button:hover {
   width: 26px;
   border-radius: 25px;
 }
-.card:hover .card-check {
+.card:hover .card__check {
   width: 15%;
 }
-.card:hover .card-check span {
+.card:hover .card__check span {
   animation: rotate 750ms;
 }
-.card:hover .card-description {
+.card:hover .card__description {
   white-space: nowrap;
   width: 60%;
 }
@@ -454,6 +439,16 @@ button:hover {
   white-space: nowrap;
 }
 
+/* Animation de la coche qui tourne */
+@keyframes rotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/* Mise en place de l'animation xde transition des cartes */
 @keyframes entrees {
   0% {
     transform: translateY(-100px) translateX(150px);
@@ -464,7 +459,7 @@ button:hover {
     opacity: 1;
   }
 }
-.entrees-animation {
+.entrees__animation {
   animation: entrees 1800ms 0ms;
 }
 
@@ -478,7 +473,7 @@ button:hover {
     opacity: 1;
   }
 }
-.plats-animation {
+.plats__animation {
   animation: plats 1800ms 0ms;
 }
 
@@ -492,18 +487,10 @@ button:hover {
     opacity: 1;
   }
 }
-.desserts-animation {
+.desserts__animation {
   animation: desserts 1800ms 0ms;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 .footer {
   display: flex;
   flex-direction: column;
@@ -511,15 +498,6 @@ button:hover {
   padding: 30px 20px;
   background-color: rgb(58, 58, 58);
   color: white;
-}
-.footer-logo {
-  width: 35%;
-  filter: invert(100%);
-  margin-bottom: 12px;
-}
-.footer-logo img {
-  width: 100%;
-  height: 100%;
 }
 .footer p {
   font-size: 18px;
@@ -532,16 +510,25 @@ button:hover {
   text-decoration: none;
   color: white;
 }
-.footer-info {
+.footer__logo {
+  width: 35%;
+  filter: invert(100%);
+  margin-bottom: 12px;
+}
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+}
+.footer__info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
 }
-.footer-info span {
+.footer__info span {
   width: 5%;
 }
-.footer-info p {
+.footer__info p {
   margin-left: 15px;
 }
 

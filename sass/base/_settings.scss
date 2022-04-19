@@ -1,5 +1,11 @@
 /* Paramètres généraux du site web Ohmyfood */
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 h1 {
     font-size: 21px;
     font-weight: bolder;
@@ -30,7 +36,7 @@ h4 {
         left: 0;
         height: 3px;
         width: 45px;
-        background-color: #99E2D0;
+        background-color: $color-tertiary;
     }
 }
 
@@ -40,10 +46,4 @@ h5 {
     margin-left: 3px;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
 }

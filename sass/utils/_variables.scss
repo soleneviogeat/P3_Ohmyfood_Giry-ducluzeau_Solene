@@ -1,9 +1,9 @@
-/* Variables pour l'animation de l'arrivée des cartes sur les pages restaurants */
+/* Variables pour l'animation de transition des cartes sur les pages menus */
 
 $prog-card-dur: 1800ms;
 $prog-card-delay: 0ms;
 
-/* Variables pour l'animation loading spinner */
+/* Variables pour l'animation du loading spinner */
 
 $prog-spin-dur: 2000ms;
 $prog-spin-delay: 0ms;
@@ -11,10 +11,14 @@ $body-delay: 7000ms;
 
 /* Variables couleurs */
 
-$color-button: linear-gradient(#FF79DA, #9356DC);
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-button: linear-gradient($color-secondary, $color-primary);
+$color-background: #fcf9f9;
 
 /* Variable box shadow */
 
-$color-box-shadow: rgb(231, 229, 229);
-$box-shadow-size: 5px 5px 10px;
+$color-shadow: rgb(231, 229, 229);
+$size-shadow: 5px 5px 10px;
 

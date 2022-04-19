@@ -1,15 +1,22 @@
 /* Mise en page des menus */
 
+.cover-image img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
 .menu {
     border-radius: 35px 35px 0px 0px;
     margin-top: -32px;
     display: inline-block;
-    background-color: #fcf9f9;
+    background-color: $color-background;
     padding: 10px 20px;
-    margin-bottom: 50px;    
+    padding-bottom: 50px;    
 }
 
-.menu-title {
+.menu__title {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -22,20 +29,20 @@
     overflow: hidden;
     cursor: pointer;
     
-    &-description {
+    &__description {
         display: flex;
         flex-direction: column;
         padding: 10px;
         overflow: hidden;        
 
-        & p {            
+        p {            
             overflow: hidden;
             text-overflow: ellipsis;
             margin: 4px;
         }
     }
     
-    &-price {
+    &__price {
         display: flex;
         align-items: flex-end;
         margin-left: auto;
@@ -43,21 +50,18 @@
         padding: 13px;
     }
 
-    &-check {
+    &__check {
         display: grid;
         place-items: center;
-        background-color: #99E2D0;
+        background-color: $color-tertiary;
         width: 0%;
         transition: width 750ms;
-        /*margin-right: -65px;
-        width: 65px;
-        transition: margin-right 500ms;*/
 
-        & span {
+        span {
             display: grid;
             place-items: center;
             background-color: white;
-            color: #99E2D0;
+            color: $color-tertiary;
             height: 26px;
             width: 26px; 
             border-radius: 25px;
@@ -66,15 +70,15 @@
 
     &:hover {
 
-        .card-check {
+        .card__check {
             width: 15%;
             
-            & span {
-                animation: rotate 750ms;
+            span {
+                animation: rotate 750ms; // Animation de la coche qui tourne
             }
         }
 
-        .card-description {
+        .card__description {
             white-space: nowrap;   
             width: 60%;
         }
@@ -84,6 +88,20 @@
         }
     }
 }
+
+/* Animation de la coche qui tourne */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-270deg);
+    }    
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+/* Mise en place de l'animation xde transition des cartes */
 
 
 @keyframes entrees {
@@ -97,9 +115,10 @@
     }
 }
 
-.entrees-animation {
+.entrees__animation {
     animation: entrees $prog-card-dur $prog-card-delay;
 }
+
 
 @keyframes plats {
     0% {
@@ -112,9 +131,10 @@
     }
 }
 
-.plats-animation {
+.plats__animation {
     animation: plats $prog-card-dur $prog-card-delay;
 }
+
 
 @keyframes desserts {
     0% {
@@ -127,19 +147,12 @@
     }
 }
 
-.desserts-animation {
+.desserts__animation {
     animation: desserts $prog-card-dur $prog-card-delay;
 }
 
 
-@keyframes rotate {
-    0% {
-        transform: rotate(-270deg);
-    }    
-    100% {
-        transform: rotate(0);
-    }
-}
+
 
 
 

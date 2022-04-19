@@ -1,0 +1,39 @@
+/* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
+
+@keyframes heart {
+    0% {
+        opacity: 0;
+    }    
+    100% {
+        opacity: 1;
+    }
+}
+
+.heart {
+    width: 15%;
+    @include flex-center;
+    font-size: 35px;
+
+    .far {
+        position: absolute;
+        font-weight: 100;
+        
+        &:hover {
+            opacity: 0;
+        }
+    }
+       
+    .fas {
+        position: absolute;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        background-image: linear-gradient($color-primary, $color-secondary);    
+
+        &:hover {
+            opacity: 1;
+            animation: heart 1000ms;
+        }
+    }
+}

@@ -4,10 +4,10 @@
   position: absolute;
   border: 16px solid #0042A4;
   border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-right: 16px solid #FF79DA;
+  border-top: 16px solid $color-primary;
+  border-right: 16px solid $color-secondary;
   border-bottom: 16px solid #96BFF9;
-  border-left: 16px solid #99E2D0;
+  border-left: 16px solid $color-tertiary;
   width: 200px;
   height: 200px;
   top: 30%;
@@ -29,11 +29,11 @@
   }
 }
 
-.le-reste-du-monde {
-  animation: body $body-delay;  
+main {
+  animation: main $body-delay;  
 }
 
-@keyframes body {
+@keyframes main {
   0% {
     opacity: 0.2;
   }

@@ -7,7 +7,7 @@ button {
     background: $color-button;
     border: transparent;
     padding: 15px 20px;
-    box-shadow: $box-shadow-size $color-box-shadow;
+    box-shadow: $size-shadow $color-shadow;
     cursor: pointer;
     &:hover{
         @include button-anim;
@@ -17,7 +17,7 @@ button {
 .button {
     display: flex;
     justify-content: center;
-    &-com {
+    &__title {
         width: 48%;
     }
 }

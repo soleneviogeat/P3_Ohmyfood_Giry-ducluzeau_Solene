@@ -1,6 +1,14 @@
 /* Mixin effet des boutons principaux */
 
-@mixin button-anim ($color: $color-box-shadow) {
-    box-shadow: $box-shadow-size darken($color, 30%);
+@mixin button-anim ($color: $color-shadow) {
+    box-shadow: $size-shadow darken($color, 30%);
     opacity: 0.8;
 } 
+
+/* Mixin flex-center */
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

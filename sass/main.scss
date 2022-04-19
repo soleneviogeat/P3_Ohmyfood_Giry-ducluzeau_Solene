@@ -1,14 +1,21 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./base/titles";
-@import "./layouts/spinner";
-@import "./layouts/header-accueil";
-@import "./layouts/banniere-img";
-@import "./layouts/localisation-form";
-@import "./layouts/reservation";
-@import "./layouts/button";
+@import "./base/polices";
+@import "./base/settings";
+@import "./components/button";
+@import "./components/heart";
+@import "./components/spinner";
 @import "./layouts/box";
-@import "./layouts/fonctionnement";
-@import "./layouts/restaurants";
-@import "./layouts/orga-menu";
+@import "./layouts/header";
 @import "./layouts/footer";
+@import "./pages/accueil";
+@import "./pages/menu";
+
+
+
+
+
+
+
+
+
