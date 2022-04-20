@@ -1,14 +1,48 @@
 @charset "UTF-8";
-/* Variables pour l'animation de l'arrivée des cartes sur les pages restaurants */
-/* Variables pour l'animation loading spinner */
+/* Variables pour l'animation de transition des cartes sur les pages menus */
+/* Variables pour l'animation du loading spinner */
 /* Variables couleurs */
 /* Variable box shadow */
+/* Map responsive design */
 /* Mixin effet des boutons principaux */
+/* Mixin flex-center */
+/* Mixin responsive */
+/* Sélection des polices de charactères */
+/* titles : Shrikhand */
+/* txt : Roboto */
+@font-face {
+  font-family: 'Roboto';
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");
+}
+
 /* Paramètres généraux du site web Ohmyfood */
 h1 {
   font-size: 21px;
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 45px;
+  }
 }
 
 h2 {
@@ -46,224 +80,6 @@ h5 {
   text-overflow: ellipsis;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Mise en place loading spinner */
-.spinner {
-  position: absolute;
-  border: 16px solid #0042A4;
-  border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-right: 16px solid #FF79DA;
-  border-bottom: 16px solid #96BFF9;
-  border-left: 16px solid #99E2D0;
-  width: 200px;
-  height: 200px;
-  top: 30%;
-  left: 20%;
-  -webkit-animation: spin 2000ms linear 0ms;
-          animation: spin 2000ms linear 0ms;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-  opacity: 0;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-
-.le-reste-du-monde {
-  -webkit-animation: body 7000ms;
-          animation: body 7000ms;
-}
-
-@-webkit-keyframes body {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes body {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Mise en page du header */
-.header-accueil {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header-resto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 85%;
-}
-
-.header-arrow {
-  font-size: 25px;
-}
-
-.header-arrow a {
-  color: black;
-}
-
-.header-logo {
-  width: 45%;
-  padding: 12px;
-}
-
-.header-logo img {
-  width: 100%;
-  height: 100%;
-}
-
-/* Mise en page de la bannière d'image sur les pages des restaurants */
-.banniere-img img {
-  height: 250px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 1;
-}
-
-/* Mise en page du formulaire dans le header */
-.formulaire {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #e7e5e5;
-  width: 100%;
-  -webkit-box-shadow: inset 0em 0.1em 2px #b8b8b8;
-          box-shadow: inset 0em 0.1em 2px #b8b8b8;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.formulaire-localisation {
-  padding-left: 30px;
-}
-
-.formulaire-recherche {
-  text-decoration: none;
-  background-color: #e7e5e5;
-  border: #e7e5e5;
-  padding-left: 15px;
-}
-
-::-webkit-input-placeholder {
-  font-weight: bold;
-  color: black;
-  font-size: 14px;
-}
-
-:-ms-input-placeholder {
-  font-weight: bold;
-  color: black;
-  font-size: 14px;
-}
-
-::-ms-input-placeholder {
-  font-weight: bold;
-  color: black;
-  font-size: 14px;
-}
-
-::placeholder {
-  font-weight: bold;
-  color: black;
-  font-size: 14px;
-}
-
-/* Mise en page 3ème partie du header */
-.reservation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  background-color: #fcf9f9;
-  padding-top: 15px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 50px;
-}
-
-.reservation p {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 25px;
-}
-
 /* Design bouton dégradé */
 button {
   color: white;
@@ -293,235 +109,11 @@ button:hover {
           justify-content: center;
 }
 
-.button-com {
+.button__title {
   width: 48%;
 }
 
-/* Paramètres des box */
-.box {
-  display: -ms-grid;
-  display: grid;
-  height: auto;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  -webkit-box-shadow: 5px 5px 10px #e7e5e5;
-          box-shadow: 5px 5px 10px #e7e5e5;
-}
-
-.fonctionnement {
-  padding: 30px 20px;
-}
-
-.fonctionnement-orga {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.fonctionnement-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%;
-  background-color: #fcf9f9;
-  padding: 5px 0px;
-}
-
-.fonctionnement-box:hover {
-  background: #e7d2ff;
-}
-
-.fonctionnement-box:hover .fonctionnement-box-icone {
-  color: #9356dc;
-}
-
-.fonctionnement-box a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-decoration: none;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  width: 100%;
-}
-
-.fonctionnement-box-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: -15px;
-  width: 23px;
-  height: 23px;
-  min-width: 0px;
-  min-height: 0px;
-  border-radius: 50%;
-  color: white;
-  font-size: 15px;
-  background-color: #9356dc;
-}
-
-.fonctionnement-box-icone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 20%;
-  font-size: 20px;
-  color: grey;
-}
-
-.fonctionnement-box-txt {
-  font-size: 15px;
-  font-weight: bolder;
-  color: black;
-}
-
-.restaurants {
-  padding: 30px 20px;
-  background-color: #fcf9f9;
-  /* Organisation des vignettes */
-}
-
-.restaurants-orga {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.restaurants-orga a {
-  color: black;
-}
-
-.restaurants-orga-card {
-  width: 100%;
-  height: auto;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.restaurants-orga-card .new {
-  position: absolute;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: .7rem;
-  background-color: #99E2D0;
-  color: green;
-  font-weight: bold;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
-
-.restaurants .img-new {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.restaurants ul {
-  list-style-type: none;
-  width: 100%;
-  padding-left: 0;
-}
-
-.restaurants-orga-card-image {
-  height: 180px;
-  width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 130%;
-     object-position: 50% 130%;
-}
-
-.restaurants-orga-card-image1 {
-  height: 180px;
-  width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 110%;
-     object-position: 50% 110%;
-}
-
-.restaurants-orga-card-image2 {
-  height: 180px;
-  width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 60%;
-     object-position: 50% 60%;
-}
-
-.restaurants-orga-card-texte {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5px 10px;
-}
-
-.restaurants-orga-card-texte h2 {
-  margin-top: 0;
-  margin-bottom: 0px;
-  color: black;
-}
-
-.restaurants-orga-card-texte p {
-  margin-top: 0;
-  color: black;
-}
-
+/* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
 @-webkit-keyframes heart {
   0% {
     opacity: 0;
@@ -530,7 +122,6 @@ button:hover {
     opacity: 1;
   }
 }
-
 @keyframes heart {
   0% {
     opacity: 0;
@@ -579,17 +170,620 @@ button:hover {
           animation: heart 1000ms;
 }
 
+/* Mise en place loading spinner */
+.spinner {
+  position: absolute;
+  border: 16px solid #0042A4;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #96BFF9;
+  border-left: 16px solid #99E2D0;
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  left: 20%;
+  -webkit-animation: spin 2000ms linear 0ms;
+          animation: spin 2000ms linear 0ms;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  opacity: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+main {
+  -webkit-animation: main 7000ms;
+          animation: main 7000ms;
+}
+
+@-webkit-keyframes main {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes main {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Paramètres généraux du site web Ohmyfood */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Paramètres des box */
+.box {
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px #e7e5e5;
+          box-shadow: 5px 5px 10px #e7e5e5;
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    margin-right: 0;
+  }
+}
+
+/* Mise en page du header de la page d'accueil */
+.header_home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  width: 45%;
+  padding: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 60%;
+  }
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mise en page du header de la page des pages menu */
+.header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+}
+
+.header__arrow {
+  font-size: 25px;
+}
+
+.header__arrow a {
+  color: black;
+}
+
+.header_responsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 20px;
+  background-color: #3a3a3a;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer p {
+  font-size: 18px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  margin-top: 8px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__logo {
+  width: 35%;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    max-width: 20%;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+}
+
+.footer__info--layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__info--layout span {
+  width: 5%;
+}
+
+.footer__info--layout p {
+  margin-left: 15px;
+}
+
+/* Mise en page de la barre de localisation */
+.localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #e7e5e5;
+  width: 100%;
+  -webkit-box-shadow: inset 0em 0.1em 2px #b8b8b8;
+          box-shadow: inset 0em 0.1em 2px #b8b8b8;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .localisation {
+    padding: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 35px;
+    width: 30%;
+  }
+}
+
+.localisation__icone {
+  padding-left: 30px;
+}
+
+.localisation__recherche {
+  text-decoration: none;
+  background-color: #e7e5e5;
+  border: #e7e5e5;
+  padding-left: 15px;
+}
+
+::-webkit-input-placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+::-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+::placeholder {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+/* Mise en page de la courte présentation de l'entreprise */
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: #fcf9f9;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .presentation {
+    -webkit-box-shadow: inset 0em 0.1em 2px #b8b8b8;
+            box-shadow: inset 0em 0.1em 2px #b8b8b8;
+    background-color: #e7e5e5;
+  }
+}
+
+.presentation p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Mise en page de la partie Fonctionnement */
+.fonctionnement {
+  padding: 30px 20px;
+}
+
+.fonctionnement_orga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .fonctionnement_orga {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.fonctionnement__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  background-color: #fcf9f9;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .fonctionnement__box {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .fonctionnement__box {
+    width: 25%;
+  }
+}
+
+.fonctionnement__box:hover {
+  background: #e7d2ff;
+}
+
+.fonctionnement__box:hover .fonctionnement__icone {
+  color: #9356DC;
+}
+
+.fonctionnement__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -15px;
+  width: 23px;
+  height: 23px;
+  min-width: 0px;
+  min-height: 0px;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  background-color: #9356DC;
+}
+
+.fonctionnement__icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  font-size: 20px;
+  color: grey;
+}
+
+.fonctionnement__text {
+  font-size: 15px;
+  font-weight: bolder;
+  color: black;
+}
+
+.fonctionnement a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Mise en page des 4 menus sous forme de cartes */
+.restaurants {
+  padding: 30px 20px;
+  background-color: #fcf9f9;
+}
+
+.restaurants_orga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurants_orga ul {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants_orga ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants_orga li {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .restaurants_orga li {
+    width: 34%;
+  }
+}
+
+.restaurants_orga a {
+  color: black;
+}
+
+.restaurants__card {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.restaurants__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.restaurants__image--layout {
+  height: 180px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurants__nouveau {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: .7rem;
+  background-color: #99E2D0;
+  color: green;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.restaurants__texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.restaurants__texte h2 {
+  margin-top: 0;
+  margin-bottom: 0px;
+  color: black;
+}
+
+.restaurants__texte p {
+  margin-top: 0;
+  color: black;
+}
+
 /* Mise en page des menus */
+.cover-image img {
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+
 .menu {
   border-radius: 35px 35px 0px 0px;
   margin-top: -32px;
   display: inline-block;
   background-color: #fcf9f9;
   padding: 10px 20px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
-.menu-title {
+.menu__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,7 +810,7 @@ button:hover {
   cursor: pointer;
 }
 
-.card-description {
+.card__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,13 +822,13 @@ button:hover {
   overflow: hidden;
 }
 
-.card-description p {
+.card__description p {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 4px;
 }
 
-.card-price {
+.card__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,7 +840,7 @@ button:hover {
   padding: 13px;
 }
 
-.card-check {
+.card__check {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -654,12 +848,9 @@ button:hover {
   width: 0%;
   -webkit-transition: width 750ms;
   transition: width 750ms;
-  /*margin-right: -65px;
-        width: 65px;
-        transition: margin-right 500ms;*/
 }
 
-.card-check span {
+.card__check span {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -670,16 +861,16 @@ button:hover {
   border-radius: 25px;
 }
 
-.card:hover .card-check {
+.card:hover .card__check {
   width: 15%;
 }
 
-.card:hover .card-check span {
+.card:hover .card__check span {
   -webkit-animation: rotate 750ms;
           animation: rotate 750ms;
 }
 
-.card:hover .card-description {
+.card:hover .card__description {
   white-space: nowrap;
   width: 60%;
 }
@@ -688,6 +879,29 @@ button:hover {
   white-space: nowrap;
 }
 
+/* Animation de la coche qui tourne */
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+/* Mise en place de l'animation de transition des cartes */
 @-webkit-keyframes entrees {
   0% {
     -webkit-transform: translateY(-100px) translateX(150px);
@@ -700,7 +914,6 @@ button:hover {
     opacity: 1;
   }
 }
-
 @keyframes entrees {
   0% {
     -webkit-transform: translateY(-100px) translateX(150px);
@@ -714,7 +927,7 @@ button:hover {
   }
 }
 
-.entrees-animation {
+.entrees__animation {
   -webkit-animation: entrees 1800ms 0ms;
           animation: entrees 1800ms 0ms;
 }
@@ -745,7 +958,7 @@ button:hover {
   }
 }
 
-.plats-animation {
+.plats__animation {
   -webkit-animation: plats 1800ms 0ms;
           animation: plats 1800ms 0ms;
 }
@@ -776,94 +989,8 @@ button:hover {
   }
 }
 
-.desserts-animation {
+.desserts__animation {
   -webkit-animation: desserts 1800ms 0ms;
           animation: desserts 1800ms 0ms;
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 30px 20px;
-  background-color: #3a3a3a;
-  color: white;
-}
-
-.footer-logo {
-  width: 35%;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-  margin-bottom: 12px;
-}
-
-.footer-logo img {
-  width: 100%;
-  height: 100%;
-}
-
-.footer p {
-  font-size: 18px;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  margin-top: 8px;
-}
-
-.footer a {
-  text-decoration: none;
-  color: white;
-}
-
-.footer-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.footer-info span {
-  width: 5%;
-}
-
-.footer-info p {
-  margin-left: 15px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,15 @@
 /* Mise en page du header de la page d'accueil */
 
-.header_accueil {
+.header_home {
  @include flex-center;
 }
 
 .header__logo {
   width: 45%;
   padding: 12px;
+  @include responsive-tablet {
+    width: 60%;
+}
 }
 
 .header__logo img {
@@ -30,4 +33,9 @@
   & a {
     color: black;
   }
+}
+
+.header_responsive {
+  display: flex;
+  justify-content: space-around;
 }

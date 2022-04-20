@@ -8,6 +8,13 @@
     box-shadow: inset 0em .1em 2px rgb(184, 184, 184);
     padding-top: 12px;
     padding-bottom: 12px;
+    @include responsive-tablet {
+        padding: 0;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        border-radius: 35px;
+        width: 30%;
+    }
     
     &__icone {
         padding-left: 30px;
@@ -25,6 +32,9 @@
     font-weight: bold;
     color: black;
     font-size: 14px;
+    @include responsive-tablet {
+        
+    }
 }
 
 
@@ -39,6 +49,11 @@
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 50px;
+
+    @include responsive-tablet {
+        box-shadow: inset 0em .1em 2px rgb(184, 184, 184);
+        background-color: $color-shadow;
+    }
 
     & p {
         font-size: 16px;
@@ -58,6 +73,10 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        @include responsive-desktop {
+            flex-direction: row;
+        }
     }
 
     &__box {
@@ -67,6 +86,14 @@
         background-color: $color-background;
         padding: 5px 0px;
         cursor: pointer;
+
+        @include responsive-tablet {
+            width: 55%;
+        }
+
+        @include responsive-desktop {
+            width: 25%;
+        }
 
         &:hover {
             background: #e7d2ff;
@@ -127,13 +154,29 @@
         justify-content: space-around;
         align-items: center; 
 
-        & ul {
+        ul {
             list-style-type: none;
             width: 100%;
             padding-left: 0;
+
+            @include responsive-tablet {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+        }
+
+        li {
+            @include responsive-tablet {
+                width: 45%;
+            }
+
+            @include responsive-desktop {
+                width: 34%;
+            }
         } 
         
-        & a {
+        a {
            color: black;
         }
     }
@@ -142,7 +185,7 @@
         width: 100%;
         height: auto;
         text-decoration: none;
-        cursor: pointer;            
+        cursor: pointer;  
     }
 
     &__image {

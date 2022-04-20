@@ -12,3 +12,17 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Mixin responsive */
+
+@mixin responsive-desktop {
+    @media screen and (min-width: map-get($responsive, tablet)) {
+        @content;
+    }
+}
+
+@mixin responsive-tablet {
+    @media screen and (min-width: map-get($responsive, mobile)) {
+        @content;
+    }
+}
