@@ -27,7 +27,7 @@ h1 {
     align-items: center;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1046px) {
   h1 {
     justify-content: flex-start;
     padding-left: 45px;
@@ -91,6 +91,17 @@ button:hover {
 .button__title {
   width: 48%;
 }
+@media screen and (min-width: 768px) {
+  .button__title {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1046px) {
+  .button__title {
+    margin-top: 20px;
+    width: 20%;
+  }
+}
 
 /* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
 @keyframes heart {
@@ -131,6 +142,12 @@ button:hover {
 /* Mise en place loading spinner */
 .spinner {
   position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
   border: 16px solid #0042A4;
   border-radius: 50%;
   border-top: 16px solid #9356DC;
@@ -139,8 +156,6 @@ button:hover {
   border-left: 16px solid #99E2D0;
   width: 200px;
   height: 200px;
-  top: 30%;
-  left: 20%;
   animation: spin 2000ms linear 0ms;
   transform: rotate(0);
   opacity: 0;
@@ -183,31 +198,30 @@ body {
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgb(231, 229, 229);
 }
+
+/* Mise en page du header de la page d'accueil */
+.header_responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 @media screen and (min-width: 768px) {
-  .box {
-    margin-right: 0;
+  .header_responsive {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
-/* Mise en page du header de la page d'accueil */
-.header_home {
+.header__logo {
+  padding: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header__logo {
-  width: 45%;
-  padding: 12px;
-}
-@media screen and (min-width: 768px) {
-  .header__logo {
-    width: 60%;
-  }
-}
-
 .header__logo img {
-  width: 100%;
+  width: 45%;
   height: 100%;
 }
 
@@ -218,6 +232,16 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 85%;
+}
+@media screen and (min-width: 768px) {
+  .header_menu {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1046px) {
+  .header_menu {
+    width: 75%;
+  }
 }
 
 .header__arrow {
@@ -264,12 +288,16 @@ body {
 @media screen and (min-width: 768px) {
   .footer__logo {
     max-width: 20%;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 }
 .footer__logo img {
   width: 100%;
   height: 100%;
+}
+.footer ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 @media screen and (min-width: 768px) {
   .footer__info {
@@ -277,6 +305,11 @@ body {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .footer__info p {
+    font-size: 14px;
   }
 }
 .footer__info--layout {
@@ -306,7 +339,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .localisation {
-    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-top: 12px;
     margin-bottom: 12px;
     border-radius: 35px;
@@ -363,7 +397,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1046px) {
   .fonctionnement_orga {
     flex-direction: row;
   }
@@ -381,7 +415,7 @@ body {
     width: 55%;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1046px) {
   .fonctionnement__box {
     width: 25%;
   }
@@ -455,7 +489,7 @@ body {
     width: 45%;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1046px) {
   .restaurants_orga li {
     width: 34%;
   }
@@ -522,11 +556,24 @@ body {
   padding: 10px 20px;
   padding-bottom: 50px;
 }
+@media screen and (min-width: 449px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    border-radius: 0;
+  }
+}
 
 .menu__title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+@media screen and (min-width: 768px) {
+  .menu__title {
+    justify-content: space-between;
+  }
 }
 
 .card {
@@ -536,11 +583,21 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .card {
+    width: 32%;
+  }
+}
 .card__description {
   display: flex;
   flex-direction: column;
   padding: 10px;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .card__description {
+    justify-content: center;
+  }
 }
 .card__description p {
   overflow: hidden;
@@ -607,6 +664,12 @@ body {
 .entrees__animation {
   animation: entrees 1800ms 0ms;
 }
+@media screen and (min-width: 768px) {
+  .entrees__animation {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 @keyframes plats {
   0% {
@@ -621,6 +684,12 @@ body {
 .plats__animation {
   animation: plats 1800ms 0ms;
 }
+@media screen and (min-width: 768px) {
+  .plats__animation {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 @keyframes desserts {
   0% {
@@ -634,6 +703,12 @@ body {
 }
 .desserts__animation {
   animation: desserts 1800ms 0ms;
+}
+@media screen and (min-width: 768px) {
+  .desserts__animation {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

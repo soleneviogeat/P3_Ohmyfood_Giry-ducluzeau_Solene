@@ -9,6 +9,7 @@ button {
     padding: 15px 20px;
     box-shadow: $size-shadow $color-shadow;
     cursor: pointer;
+
     &:hover{
         @include button-anim;
     }
@@ -19,5 +20,14 @@ button {
     justify-content: center;
     &__title {
         width: 48%;
+
+        @include responsive-tablet {
+            width: 30%;
+        }
+
+        @include responsive-desktop {
+            margin-top: 20px;
+            width: 20%;
+        }
     }
 }

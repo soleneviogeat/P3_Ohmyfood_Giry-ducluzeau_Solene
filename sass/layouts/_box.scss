@@ -6,8 +6,4 @@
     margin-bottom: 30px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px $color-shadow;
-
-    @include responsive-tablet {
-        margin-right: 0;
-    }
 }

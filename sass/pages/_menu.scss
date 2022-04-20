@@ -13,13 +13,24 @@
     display: inline-block;
     background-color: $color-background;
     padding: 10px 20px;
-    padding-bottom: 50px;    
+    padding-bottom: 50px;
+    
+    @media screen and (min-width: 449px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        border-radius: 0;
+    } 
 }
 
 .menu__title {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    @include responsive-tablet {
+        justify-content: space-between;
+    }
 }
 
 .card {
@@ -28,12 +39,20 @@
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
+
+    @include responsive-tablet {
+        width: 32%;
+    }
     
     &__description {
         display: flex;
         flex-direction: column;
         padding: 10px;
-        overflow: hidden;        
+        overflow: hidden;    
+        
+        @include responsive-tablet {
+            justify-content: center;
+        }
 
         p {            
             overflow: hidden;
@@ -117,6 +136,11 @@
 
 .entrees__animation {
     animation: entrees $prog-card-dur $prog-card-delay;
+
+    @include responsive-tablet {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 
@@ -133,6 +157,11 @@
 
 .plats__animation {
     animation: plats $prog-card-dur $prog-card-delay;
+
+    @include responsive-tablet {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 
@@ -149,6 +178,11 @@
 
 .desserts__animation {
     animation: desserts $prog-card-dur $prog-card-delay;
+
+    @include responsive-tablet {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 

@@ -2,6 +2,12 @@
 
 .spinner {
   position: absolute;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
   border: 16px solid #0042A4;
   border-radius: 50%;
   border-top: 16px solid $color-primary;
@@ -10,8 +16,6 @@
   border-left: 16px solid $color-tertiary;
   width: 200px;
   height: 200px;
-  top: 30%;
-  left: 20%;
   animation: spin $prog-spin-dur linear $prog-spin-delay;
   transform: rotate(0);
   opacity: 0;

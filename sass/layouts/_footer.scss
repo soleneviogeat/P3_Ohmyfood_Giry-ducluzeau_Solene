@@ -29,9 +29,8 @@
         margin-bottom: 12px;
 
         @include responsive-tablet {
-            
             max-width: 20%;
-            margin-bottom: 20px;
+            margin-bottom: 35px;
         }
 
         img {
@@ -40,12 +39,23 @@
         }
     }
 
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
     &__info {
         @include responsive-tablet {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             width: 100%;
+
+            p {
+                @include responsive-tablet {
+                    font-size: 14px;
+                }
+            }
         }
 
         &--layout             {
@@ -54,11 +64,11 @@
             justify-content: flex-start;
             align-items: flex-end;
     
-            & span {
+            span {
                 width: 5%;
             }
     
-            & p {
+            p {
                 margin-left: 15px;
             }
         }
