@@ -1,5 +1,11 @@
-/* Sélection des polices de charactères */ 
+/* Sélection des polices de caractères */ 
+
 /* titles : Shrikhand */
+@font-face { 
+    font-family: 'Shrikhand';
+    src: url("/police/Shrikhand/Shrikhand-Regular.otf");
+}
+
 /* txt : Roboto */
 @font-face {
     font-family: 'Roboto';

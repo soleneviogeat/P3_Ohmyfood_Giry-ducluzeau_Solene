@@ -33,9 +33,6 @@
     font-weight: bold;
     color: black;
     font-size: 14px;
-    @include responsive-tablet {
-        
-    }
 }
 
 
@@ -86,7 +83,6 @@
         width: 100%;
         background-color: $color-background;
         padding: 5px 0px;
-        cursor: pointer;
 
         @include responsive-tablet {
             width: 55%;

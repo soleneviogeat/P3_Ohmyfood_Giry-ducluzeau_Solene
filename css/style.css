@@ -7,8 +7,12 @@
 /* Mixin effet des boutons principaux */
 /* Mixin flex-center */
 /* Mixin responsive */
-/* Sélection des polices de charactères */
+/* Sélection des polices de caractères */
 /* titles : Shrikhand */
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/police/Shrikhand/Shrikhand-Regular.otf");
+}
 /* txt : Roboto */
 @font-face {
   font-family: "Roboto";
@@ -362,6 +366,7 @@ body {
   color: black;
   font-size: 14px;
 }
+
 /* Mise en page de la courte présentation de l'entreprise */
 .presentation {
   display: flex;
@@ -408,7 +413,6 @@ body {
   width: 100%;
   background-color: #fcf9f9;
   padding: 5px 0px;
-  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement__box {
