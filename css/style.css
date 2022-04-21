@@ -11,7 +11,7 @@
 /* titles : Shrikhand */
 @font-face {
   font-family: "Shrikhand";
-  src: url("/police/Shrikhand/Shrikhand-Regular.otf");
+  src: url(https://github.com/jonpinhorn/shrikhand/blob/master/build/Shrikhand-Regular.otf);
 }
 /* txt : Roboto */
 @font-face {
