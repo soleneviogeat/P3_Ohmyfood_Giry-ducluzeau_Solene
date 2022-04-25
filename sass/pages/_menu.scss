@@ -21,14 +21,6 @@
     width: 100%;
     z-index: -1;
 
-    
-    /*@media screen and (min-width: 393px) {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0px;
-        border-radius: 0;
-    } */
-
     &__title {
     display: flex;
     flex-direction: row;
@@ -62,23 +54,18 @@
     overflow: hidden;
     background-color: white;
 
+    @include responsive-tablet {
+        margin: .5rem;
+        width: 31%;
+    }
+
     animation: transition $prog-card-dur;
     @for $i from 1 through 12 {
         &--#{$i} {
             animation-delay: $prog-card-delay * $i;
             animation-fill-mode: both;
         }
-    }   
-
-    @include responsive-tablet {
-        width: 30%;
-    }
-
-    &--1, &--2, &--3, &--4 {
-        @include responsive-tablet {
-            width: 23%;
-        }
-    }
+    }       
     
     &__description {
         display: flex;

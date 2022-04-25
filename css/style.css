@@ -559,12 +559,6 @@ body {
   padding-bottom: 50px;
   width: 100%;
   z-index: -1;
-  /*@media screen and (min-width: 393px) {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0px;
-      border-radius: 0;
-  } */
 }
 .menu__title {
   display: flex;
@@ -596,6 +590,12 @@ body {
   overflow: hidden;
   background-color: white;
   animation: transition 1800ms;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    margin: 0.5rem;
+    width: 31%;
+  }
 }
 .card--1 {
   animation-delay: 200ms;
@@ -644,16 +644,6 @@ body {
 .card--12 {
   animation-delay: 2400ms;
   animation-fill-mode: both;
-}
-@media screen and (min-width: 768px) {
-  .card {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .card--1, .card--2, .card--3, .card--4 {
-    width: 23%;
-  }
 }
 .card__description {
   display: flex;
