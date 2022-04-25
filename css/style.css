@@ -7,12 +7,11 @@
 /* Mixin effet des boutons principaux */
 /* Mixin flex-center */
 /* Mixin responsive */
-/* Responsive animation des coeurs */
 /* Sélection des polices de caractères */
 /* titles : Shrikhand */
 @font-face {
   font-family: "Shrikhand";
-  src: url("/police/Shrikhand/Shrikhand-Regular.otf");
+  src: url(https://fonts.gstatic.com/s/shrikhand/v9/a8IbNovtLWfR7T7bMJwrA4KR.woff2) format("woff2");
 }
 /* txt : Roboto */
 @font-face {
@@ -120,16 +119,6 @@ button:hover {
   position: absolute;
   font-weight: 100;
 }
-@media screen and (min-width: 1046px) {
-  .heart .far .far:hover {
-    animation: heart 600ms both;
-    animation-direction: reverse;
-  }
-}
-.heart .far:active {
-  animation: heart 600ms both;
-  animation-direction: reverse;
-}
 .heart .fas {
   position: absolute;
   color: transparent;
@@ -138,14 +127,16 @@ button:hover {
   opacity: 0;
   background-image: linear-gradient(#9356DC, #FF79DA);
 }
-.heart .fas:active {
-  opacity: 1;
-  transition: opacity 600ms;
+@media screen and (min-width: 0) {
+  .heart .fas:active {
+    opacity: 1;
+    transition: opacity 600ms;
+  }
 }
 @media screen and (min-width: 1046px) {
-  .heart .fas .fas:hover {
-    animation: heart 600ms both;
-    animation-direction: reverse;
+  .heart .fas:hover {
+    opacity: 1;
+    transition: opacity 600ms;
   }
 }
 
@@ -198,6 +189,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
 /* Paramètres des box */
@@ -551,7 +543,12 @@ body {
   height: 250px;
   width: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 4;
+}
+@media screen and (min-width: 1046px) {
+  .cover-image img {
+    height: 350px;
+  }
 }
 
 .menu {
@@ -559,26 +556,29 @@ body {
   margin-top: -32px;
   display: inline-block;
   background-color: #f7f6f6;
-  padding: 10px 20px;
   padding-bottom: 50px;
-}
-@media screen and (min-width: 393px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    border-radius: 0;
-  }
+  width: 100%;
+  z-index: -1;
+  /*@media screen and (min-width: 393px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+      border-radius: 0;
+  } */
 }
 .menu__title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   .menu__title {
     justify-content: space-between;
   }
+}
+.menu__body {
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   .menu__transition {
@@ -647,7 +647,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .card {
-    width: 32%;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card--1, .card--2, .card--3, .card--4 {
+    width: 23%;
   }
 }
 .card__description {

@@ -7,8 +7,13 @@
 /* Mixin effet des boutons principaux */
 /* Mixin flex-center */
 /* Mixin responsive */
-/* Sélection des polices de charactères */
+/* Sélection des polices de caractères */
 /* titles : Shrikhand */
+@font-face {
+  font-family: 'Shrikhand';
+  src: url(https://fonts.gstatic.com/s/shrikhand/v9/a8IbNovtLWfR7T7bMJwrA4KR.woff2) format("woff2");
+}
+
 /* txt : Roboto */
 @font-face {
   font-family: 'Roboto';
@@ -83,12 +88,12 @@ h5 {
 /* Design bouton dégradé */
 button {
   color: white;
-  font-weight: bolder;
   border-radius: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border: transparent;
   padding: 15px 20px;
+  font-size: 16px;
   -webkit-box-shadow: 5px 5px 10px #e7e5e5;
           box-shadow: 5px 5px 10px #e7e5e5;
   cursor: pointer;
@@ -127,23 +132,6 @@ button:hover {
 }
 
 /* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .heart {
   width: 15%;
   display: -webkit-box;
@@ -163,10 +151,6 @@ button:hover {
   font-weight: 100;
 }
 
-.heart .far:hover {
-  opacity: 0;
-}
-
 .heart .fas {
   position: absolute;
   color: transparent;
@@ -177,10 +161,20 @@ button:hover {
   background-image: linear-gradient(#9356DC, #FF79DA);
 }
 
-.heart .fas:hover {
-  opacity: 1;
-  -webkit-animation: heart 1000ms;
-          animation: heart 1000ms;
+@media screen and (min-width: 0) {
+  .heart .fas:active {
+    opacity: 1;
+    -webkit-transition: opacity 600ms;
+    transition: opacity 600ms;
+  }
+}
+
+@media screen and (min-width: 1046px) {
+  .heart .fas:hover {
+    opacity: 1;
+    -webkit-transition: opacity 600ms;
+    transition: opacity 600ms;
+  }
 }
 
 /* Mise en place loading spinner */
@@ -262,6 +256,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  width: 100%;
 }
 
 /* Paramètres des box */
@@ -280,12 +275,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -335,7 +326,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 85%;
+  padding: 12px;
+  width: 88%;
+  margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -351,19 +344,11 @@ body {
 }
 
 .header__arrow {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .header__arrow a {
   color: black;
-}
-
-.header_responsive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .footer {
@@ -556,7 +541,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
   padding-top: 15px;
   padding-right: 20px;
   padding-left: 20px;
@@ -614,7 +599,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
   padding: 5px 0px;
 }
 
@@ -697,7 +682,7 @@ body {
 /* Mise en page des 4 menus sous forme de cartes */
 .restaurants {
   padding: 30px 20px;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
 }
 
 .restaurants_orga {
@@ -807,7 +792,7 @@ body {
 }
 
 .restaurants__texte h2 {
-  margin-top: 0;
+  margin-top: 8px;
   margin-bottom: 0px;
   color: black;
 }
@@ -823,30 +808,29 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 1;
+  z-index: 4;
+}
+
+@media screen and (min-width: 1046px) {
+  .cover-image img {
+    height: 350px;
+  }
 }
 
 .menu {
   border-radius: 35px 35px 0px 0px;
   margin-top: -32px;
   display: inline-block;
-  background-color: #fcf9f9;
-  padding: 10px 20px;
+  background-color: #f7f6f6;
   padding-bottom: 50px;
-}
-
-@media screen and (min-width: 449px) {
-  .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 0px;
-    border-radius: 0;
-  }
+  width: 100%;
+  z-index: -1;
+  /*@media screen and (min-width: 393px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        border-radius: 0;
+    } */
 }
 
 .menu__title {
@@ -859,10 +843,26 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .menu__title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.menu__body {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__transition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -880,13 +880,107 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-decoration: none;
+  color: black;
   overflow: hidden;
-  cursor: pointer;
+  background-color: white;
+  -webkit-animation: transition 1800ms;
+          animation: transition 1800ms;
+}
+
+.card--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--4 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--5 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--6 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--7 {
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--8 {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--9 {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--10 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--11 {
+  -webkit-animation-delay: 2200ms;
+          animation-delay: 2200ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.card--12 {
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @media screen and (min-width: 768px) {
   .card {
-    width: 32%;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card--1, .card--2, .card--3, .card--4 {
+    width: 23%;
   }
 }
 
@@ -933,7 +1027,7 @@ body {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
-  width: 0%;
+  width: 0;
   -webkit-transition: width 750ms;
   transition: width 750ms;
 }
@@ -949,21 +1043,21 @@ body {
   border-radius: 25px;
 }
 
-.card:hover .card__check {
+.card:focus .card__check {
   width: 15%;
 }
 
-.card:hover .card__check span {
+.card:focus .card__check span {
   -webkit-animation: rotate 750ms;
           animation: rotate 750ms;
 }
 
-.card:hover .card__description {
+.card:focus .card__description {
   white-space: nowrap;
   width: 60%;
 }
 
-.card:hover h5 {
+.card:focus h5 {
   white-space: nowrap;
 }
 
@@ -990,7 +1084,7 @@ body {
 }
 
 /* Mise en place de l'animation de transition des cartes */
-@-webkit-keyframes entrees {
+@-webkit-keyframes transition {
   0% {
     -webkit-transform: translateY(-100px) translateX(150px);
             transform: translateY(-100px) translateX(150px);
@@ -1002,7 +1096,7 @@ body {
     opacity: 1;
   }
 }
-@keyframes entrees {
+@keyframes transition {
   0% {
     -webkit-transform: translateY(-100px) translateX(150px);
             transform: translateY(-100px) translateX(150px);
@@ -1012,106 +1106,6 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
-  }
-}
-
-.entrees__animation {
-  -webkit-animation: entrees 1800ms 0ms;
-          animation: entrees 1800ms 0ms;
-}
-
-@media screen and (min-width: 768px) {
-  .entrees__animation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@-webkit-keyframes plats {
-  0% {
-    -webkit-transform: translateY(-100px) translateX(150px);
-            transform: translateY(-100px) translateX(150px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes plats {
-  0% {
-    -webkit-transform: translateY(-100px) translateX(150px);
-            transform: translateY(-100px) translateX(150px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.plats__animation {
-  -webkit-animation: plats 1800ms 0ms;
-          animation: plats 1800ms 0ms;
-}
-
-@media screen and (min-width: 768px) {
-  .plats__animation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@-webkit-keyframes desserts {
-  0% {
-    -webkit-transform: translateY(-100px) translateX(150px);
-            transform: translateY(-100px) translateX(150px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes desserts {
-  0% {
-    -webkit-transform: translateY(-100px) translateX(150px);
-            transform: translateY(-100px) translateX(150px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.desserts__animation {
-  -webkit-animation: desserts 1800ms 0ms;
-          animation: desserts 1800ms 0ms;
-}
-
-@media screen and (min-width: 768px) {
-  .desserts__animation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=main.css.map */

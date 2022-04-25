@@ -27,16 +27,10 @@
     }
 }
 
-/* Responsive animation des coeurs */
-
-@function responsive-coeur (){
-
-    @if ($responsive >= tablet) {
-        @return hover;
-    }
-
-    @else {
-        @return active;            
-    }
+@mixin responsive-mobile {
+    @media screen and (min-width: 0) {
+        @content;
+    }  
 }
+
 

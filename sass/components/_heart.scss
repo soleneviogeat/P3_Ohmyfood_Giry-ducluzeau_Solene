@@ -8,20 +8,6 @@
     .far {
         position: absolute;
         font-weight: 100;
-
-        @include responsive-desktop {
-            .far:hover {
-                animation: heart 600ms both;
-                animation-direction: reverse;
-            }
-        }
-        
-        &:active {
-            animation: heart 600ms both;
-            animation-direction: reverse;
-        }
-
-
     }
        
     .fas {
@@ -33,13 +19,16 @@
         background-image: linear-gradient($color-primary, $color-secondary);    
 
         &:active {
-            opacity: 1;
-            transition: opacity 600ms;
+            @include responsive-mobile {
+                opacity: 1;
+                transition: opacity 600ms;
+            }
         }
-        @include responsive-desktop {
-            .fas:hover {
-                animation: heart 600ms both;
-                animation-direction: reverse;
+
+        &:hover {
+            @include responsive-desktop {
+                opacity: 1;
+                transition: opacity 600ms;
             }
         }
         
