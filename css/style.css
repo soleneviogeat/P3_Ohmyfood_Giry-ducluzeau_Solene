@@ -7,6 +7,7 @@
 /* Mixin effet des boutons principaux */
 /* Mixin flex-center */
 /* Mixin responsive */
+/* Responsive animation des coeurs */
 /* Sélection des polices de caractères */
 /* titles : Shrikhand */
 @font-face {
@@ -75,11 +76,11 @@ h5 {
 /* Design bouton dégradé */
 button {
   color: white;
-  font-weight: bolder;
   border-radius: 30px;
   background: linear-gradient(#FF79DA, #9356DC);
   border: transparent;
   padding: 15px 20px;
+  font-size: 16px;
   box-shadow: 5px 5px 10px rgb(231, 229, 229);
   cursor: pointer;
 }
@@ -108,14 +109,6 @@ button:hover {
 }
 
 /* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .heart {
   width: 15%;
   display: flex;
@@ -127,8 +120,15 @@ button:hover {
   position: absolute;
   font-weight: 100;
 }
-.heart .far:hover {
-  opacity: 0;
+@media screen and (min-width: 1046px) {
+  .heart .far .far:hover {
+    animation: heart 600ms both;
+    animation-direction: reverse;
+  }
+}
+.heart .far:active {
+  animation: heart 600ms both;
+  animation-direction: reverse;
 }
 .heart .fas {
   position: absolute;
@@ -138,9 +138,15 @@ button:hover {
   opacity: 0;
   background-image: linear-gradient(#9356DC, #FF79DA);
 }
-.heart .fas:hover {
+.heart .fas:active {
   opacity: 1;
-  animation: heart 1000ms;
+  transition: opacity 600ms;
+}
+@media screen and (min-width: 1046px) {
+  .heart .fas .fas:hover {
+    animation: heart 600ms both;
+    animation-direction: reverse;
+  }
 }
 
 /* Mise en place loading spinner */
@@ -206,8 +212,7 @@ body {
 /* Mise en page du header de la page d'accueil */
 .header_responsive {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
@@ -235,7 +240,9 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 85%;
+  padding: 12px;
+  width: 88%;
+  margin-left: 16px;
 }
 @media screen and (min-width: 768px) {
   .header_menu {
@@ -249,15 +256,10 @@ body {
 }
 
 .header__arrow {
-  font-size: 25px;
+  font-size: 22px;
 }
 .header__arrow a {
   color: black;
-}
-
-.header_responsive {
-  display: flex;
-  justify-content: space-around;
 }
 
 .footer {
@@ -374,7 +376,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
   padding-top: 15px;
   padding-right: 20px;
   padding-left: 20px;
@@ -411,7 +413,7 @@ body {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
   padding: 5px 0px;
 }
 @media screen and (min-width: 768px) {
@@ -468,7 +470,7 @@ body {
 /* Mise en page des 4 menus sous forme de cartes */
 .restaurants {
   padding: 30px 20px;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
 }
 .restaurants_orga {
   display: flex;
@@ -535,7 +537,7 @@ body {
   padding: 5px 10px;
 }
 .restaurants__texte h2 {
-  margin-top: 0;
+  margin-top: 8px;
   margin-bottom: 0px;
   color: black;
 }
@@ -556,11 +558,11 @@ body {
   border-radius: 35px 35px 0px 0px;
   margin-top: -32px;
   display: inline-block;
-  background-color: #fcf9f9;
+  background-color: #f7f6f6;
   padding: 10px 20px;
   padding-bottom: 50px;
 }
-@media screen and (min-width: 449px) {
+@media screen and (min-width: 393px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -568,7 +570,6 @@ body {
     border-radius: 0;
   }
 }
-
 .menu__title {
   display: flex;
   flex-direction: row;
@@ -579,13 +580,70 @@ body {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 768px) {
+  .menu__transition {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .card {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  text-decoration: none;
+  color: black;
   overflow: hidden;
-  cursor: pointer;
+  background-color: white;
+  animation: transition 1800ms;
+}
+.card--1 {
+  animation-delay: 200ms;
+  animation-fill-mode: both;
+}
+.card--2 {
+  animation-delay: 400ms;
+  animation-fill-mode: both;
+}
+.card--3 {
+  animation-delay: 600ms;
+  animation-fill-mode: both;
+}
+.card--4 {
+  animation-delay: 800ms;
+  animation-fill-mode: both;
+}
+.card--5 {
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+}
+.card--6 {
+  animation-delay: 1200ms;
+  animation-fill-mode: both;
+}
+.card--7 {
+  animation-delay: 1400ms;
+  animation-fill-mode: both;
+}
+.card--8 {
+  animation-delay: 1600ms;
+  animation-fill-mode: both;
+}
+.card--9 {
+  animation-delay: 1800ms;
+  animation-fill-mode: both;
+}
+.card--10 {
+  animation-delay: 2000ms;
+  animation-fill-mode: both;
+}
+.card--11 {
+  animation-delay: 2200ms;
+  animation-fill-mode: both;
+}
+.card--12 {
+  animation-delay: 2400ms;
+  animation-fill-mode: both;
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -619,7 +677,7 @@ body {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
-  width: 0%;
+  width: 0;
   transition: width 750ms;
 }
 .card__check span {
@@ -631,17 +689,17 @@ body {
   width: 26px;
   border-radius: 25px;
 }
-.card:hover .card__check {
+.card:focus .card__check {
   width: 15%;
 }
-.card:hover .card__check span {
+.card:focus .card__check span {
   animation: rotate 750ms;
 }
-.card:hover .card__description {
+.card:focus .card__description {
   white-space: nowrap;
   width: 60%;
 }
-.card:hover h5 {
+.card:focus h5 {
   white-space: nowrap;
 }
 
@@ -655,7 +713,7 @@ body {
   }
 }
 /* Mise en place de l'animation de transition des cartes */
-@keyframes entrees {
+@keyframes transition {
   0% {
     transform: translateY(-100px) translateX(150px);
     opacity: 0;
@@ -663,55 +721,6 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-.entrees__animation {
-  animation: entrees 1800ms 0ms;
-}
-@media screen and (min-width: 768px) {
-  .entrees__animation {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@keyframes plats {
-  0% {
-    transform: translateY(-100px) translateX(150px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.plats__animation {
-  animation: plats 1800ms 0ms;
-}
-@media screen and (min-width: 768px) {
-  .plats__animation {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@keyframes desserts {
-  0% {
-    transform: translateY(-100px) translateX(150px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.desserts__animation {
-  animation: desserts 1800ms 0ms;
-}
-@media screen and (min-width: 768px) {
-  .desserts__animation {
-    display: flex;
-    justify-content: space-between;
   }
 }
 

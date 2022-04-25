@@ -1,7 +1,8 @@
 /* Mise en page du header de la page d'accueil */
 
 .header_responsive {
-  @include flex-center;
+  display: flex;
+  justify-content: space-around;
   flex-direction: column;
   
   @include responsive-tablet {
@@ -27,7 +28,9 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 85%;
+  padding: 12px;
+  width: 88%;
+  margin-left: 16px;
 
   @include responsive-tablet {
     width: 80%;
@@ -39,14 +42,9 @@
 }
 
 .header__arrow {
-  font-size: 25px;
+  font-size: 22px;
 
   & a {
     color: black;
   }
-}
-
-.header_responsive {
-  display: flex;
-  justify-content: space-around;
 }

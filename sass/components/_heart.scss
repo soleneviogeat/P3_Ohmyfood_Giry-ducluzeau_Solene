@@ -1,14 +1,5 @@
 /* Mise en place de l'animation du bouton "j'aime" en forme de coeur */
 
-@keyframes heart {
-    0% {
-        opacity: 0;
-    }    
-    100% {
-        opacity: 1;
-    }
-}
-
 .heart {
     width: 15%;
     @include flex-center;
@@ -17,10 +8,20 @@
     .far {
         position: absolute;
         font-weight: 100;
-        
-        &:hover {
-            opacity: 0;
+
+        @include responsive-desktop {
+            .far:hover {
+                animation: heart 600ms both;
+                animation-direction: reverse;
+            }
         }
+        
+        &:active {
+            animation: heart 600ms both;
+            animation-direction: reverse;
+        }
+
+
     }
        
     .fas {
@@ -31,9 +32,16 @@
         opacity: 0;
         background-image: linear-gradient($color-primary, $color-secondary);    
 
-        &:hover {
+        &:active {
             opacity: 1;
-            animation: heart 1000ms;
+            transition: opacity 600ms;
         }
+        @include responsive-desktop {
+            .fas:hover {
+                animation: heart 600ms both;
+                animation-direction: reverse;
+            }
+        }
+        
     }
 }

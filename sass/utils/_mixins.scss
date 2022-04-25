@@ -26,3 +26,17 @@
         @content;
     }
 }
+
+/* Responsive animation des coeurs */
+
+@function responsive-coeur (){
+
+    @if ($responsive >= tablet) {
+        @return hover;
+    }
+
+    @else {
+        @return active;            
+    }
+}
+

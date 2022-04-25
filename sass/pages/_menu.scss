@@ -15,15 +15,14 @@
     padding: 10px 20px;
     padding-bottom: 50px;
     
-    @media screen and (min-width: 449px) {
+    @media screen and (min-width: 393px) {
         display: flex;
         flex-direction: column;
         margin-top: 0px;
         border-radius: 0;
     } 
-}
 
-.menu__title {
+    &__title {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -31,14 +30,33 @@
     @include responsive-tablet {
         justify-content: space-between;
     }
+    }
+
+    &__transition {
+        @include responsive-tablet {
+            display: flex;
+            justify-content: space-between;
+        } 
+    }
+ 
 }
 
 .card {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    text-decoration: none;
+    color: black;
     overflow: hidden;
-    cursor: pointer;
+    background-color: white;
+
+    animation: transition $prog-card-dur;
+    @for $i from 1 through 12 {
+        &--#{$i} {
+            animation-delay: $prog-card-delay * $i;
+            animation-fill-mode: both;
+        }
+    }   
 
     @include responsive-tablet {
         width: 32%;
@@ -73,7 +91,7 @@
         display: grid;
         place-items: center;
         background-color: $color-tertiary;
-        width: 0%;
+        width: 0;
         transition: width 750ms;
 
         span {
@@ -87,7 +105,7 @@
         }
     }
 
-    &:hover {
+    &:focus {
 
         .card__check {
             width: 15%;
@@ -105,8 +123,9 @@
         h5 {
             white-space: nowrap;   
         }
-    }
+    } 
 }
+
 
 /* Animation de la coche qui tourne */
 
@@ -123,7 +142,7 @@
 /* Mise en place de l'animation de transition des cartes */
 
 
-@keyframes entrees {
+@keyframes transition {
     0% {
         transform: translateY(-100px) translateX(150px);
         opacity: 0;
@@ -133,61 +152,3 @@
         opacity: 1;
     }
 }
-
-.entrees__animation {
-    animation: entrees $prog-card-dur $prog-card-delay;
-
-    @include responsive-tablet {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-
-@keyframes plats {
-    0% {
-        transform: translateY(-100px) translateX(150px);
-        opacity: 0;
-    }    
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.plats__animation {
-    animation: plats $prog-card-dur $prog-card-delay;
-
-    @include responsive-tablet {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-
-@keyframes desserts {
-    0% {
-        transform: translateY(-100px) translateX(150px);
-        opacity: 0;
-    }    
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.desserts__animation {
-    animation: desserts $prog-card-dur $prog-card-delay;
-
-    @include responsive-tablet {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-
-
-
-
-
-
